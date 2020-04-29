@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">BabySouk</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_account">Account</string>
+    <string name="title_brands">Brands</string>
+    <string name="title_offers">Offers</string>
+    <string name="title_wish_list">Wishlist</string>
+
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+
+    <string name="nav_header_title">G-mail</string>
+    <string name="nav_header_subtitle">vidyesh95@gmail.com</string>
+    <string name="nav_header_background">Navigation header background</string>
+
+    <string name="menu_baby_essentials">Baby Essentials</string>
+    <string name="menu_stroller_souk">Stroller Souk</string>
+    <string name="menu_car_seats">Car Seats</string>
+    <string name="menu_feed">Feed</string>
+    <string name="menu_bath_time">Bath Time</string>
+    <string name="menu_play_time">Play Time</string>
+    <string name="menu_back_to_school">Back To School</string>
+    <string name="menu_travel_souk">Travel Souk</string>
+    <string name="menu_gift_souk">Gift Souk</string>
+    <string name="menu_outlet">Outlet</string>
+    <string name="menu_by_brand">By Brand</string>
+    <string name="menu_contact">Contact</string>
+
+    <!--Navigation child menu-->
+    <string name="sub_menu_baby_essentials">Baby Essentials</string>
+    <string name="sub_menu_clothing_and_accessories"><![CDATA[Clothing & Accessories]]></string>
+    <string name="sub_menu_decor">Décor</string>
+    <string name="sub_menu_carriers_and_wraps"><![CDATA[Carriers & Wraps]]></string>
+    <string name="sub_menu_sleep_essentials">Sleep Essentials</string>
+    <string name="sub_menu_active_and_safe_parenting"><![CDATA[Active & Safe Parenting]]></string>
+    <string name="sub_menu_all_about_mum">All About Mum</string>
+
+    <!--Navigation sub child menu-->
+    <string name="extra_sub_menu_baby_gifts">Baby Gifts</string>
+    <string name="extra_sub_menu_babaysuits_and_onesies"><![CDATA[Babysuits & Onesies]]></string>
+    <string name="extra_sub_menu_nightwear">Nightwear</string>
+    <string name="extra_sub_menu_socks_shoes_and_hats"><![CDATA[Socks, Shoes & Hats]]></string>
+    <string name="extra_sub_menu_swimwear_and_swim_towels"><![CDATA[Swimwear & Swim Towels]]></string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="first_menu_item">First Menu Item</string>
+    <string name="first_sub_menu_item">First Sub Menu Item</string>
+    <string name="second_sub_menu_item">Second Sub Menu Item</string>
+    <string name="third_sub_menu_item">Third Sub Menu Item</string>
+    <string name="fourth_sub_menu_item">Fourth Sub Menu Item</string>
+    <string name="fifth_sub_menu_item">Fifth Sub Menu Item</string>
+    <string name="sixth_sub_menu_item">SixthFirst Sub Menu Item</string>
+    <string name="seventh_sub_menu_item">Seventh Sub Menu Item</string>
+    <string name="select_your_region">Select your region</string>
+    <string name="country_flag">Country Flag</string>
+    <string name="country_name">UAE</string>
+    <string name="select_region_hint">Select Region</string>
+    <string name="select_preferred_language">Select preferred language</string>
+    <string name="lang_confirm_btn_text">GET STARTED</string>
+    
+    <string-array name="enquiry">
+        <item>How did you heard about us ?</item>
+        <item>Web commercial</item>
+        <item>Television ads</item>
+        <item>Word of mouth</item>
+        <item>Education institute</item>
+        <item>Youtube</item>
+        <item>Past customer</item>
+    </string-array>
+
+    <!-- Not to be translate-->
+    <string name="albanian_lang_btn_text">Shqipe</string>
+    <string name="amharic_lang_btn_text">የአማርኛ</string>
+    <string name="arabic_lang_btn_text">العربية</string>
+    <string name="armenian_lang_btn_text">Հայոց</string>
+    <string name="azerbaijani_lang_btn_text">Azerbaycani</string>
+    <string name="belarusian_lang_btn_text">Беларуская</string>
+    <string name="bengali_lang_btn_text">বাংলা</string>
+    <string name="bosnian_lang_btn_text">Bosanski</string>
+    <string name="bulgarian_lang_btn_text">Български</string>
+    <string name="chinese_simplified_lang_btn_text">普通话</string>
+    <string name="chinese_traditional_lang_btn_text">普通話</string>
+    <string name="croatian_lang_btn_text">Hrvatski</string>
+    <string name="czech_lang_btn_text">Český</string>
+    <string name="danish_lang_btn_text">Dansk</string>
+    <string name="dutch_lang_btn_text">Nederlandse</string>
+    <string name="english_lang_btn_text">English</string>
+    <string name="estonian_lang_btn_text">Eesti</string>
+    <string name="filipino_lang_btn_text">Filipino</string>
+    <string name="finnish_lang_btn_text">Suomen</string>
+    <string name="french_lang_btn_text">Française</string>
+    <string name="georgian_lang_btn_text">ქართული</string>
+    <string name="german_lang_btn_text">Deutsche</string>
+    <string name="greek_lang_btn_text">Ελληνική</string>
+    <string name="haitian_creole_lang_btn_text">Kreyòl ayisyen</string>
+    <string name="hebrew_lang_btn_text">עברית</string>
+    <string name="hindi_lang_btn_text">हिंदी</string>
+    <string name="hungarian_lang_btn_text">Magyar</string>
+    <string name="icelandic_lang_btn_text">Íslenskt</string>
+    <string name="indonesian_lang_btn_text">Bahasa Indonesia</string>
+    <string name="irish_lang_btn_text">Gaeilge</string>
+    <string name="italian_lang_btn_text">Italiano</string>
+    <string name="japanese_lang_btn_text">日本語</string>
+    <string name="kazakh_lang_btn_text">Қазақ </string>
+    <string name="khmer_lang_btn_text">ខ្មែរ</string>
+    <string name="kinyarwanda_lang_btn_text">Kinyarwanda</string>
+    <string name="korean_lang_btn_text">한국어</string>
+    <string name="kyrgyz_lang_btn_text">Кыргыз</string>
+    <string name="lao_lang_btn_text">ລາວ</string>
+    <string name="latin_lang_btn_text">Latinam</string>
+    <string name="latvian_lang_btn_text">Latvietis</string>
+    <string name="lithuanian_lang_btn_text">lietuvių kalba</string>
+    <string name="luxembourgish_lang_btn_text">Lëtzebuerger</string>
+    <string name="macedonian_lang_btn_text">Македонски</string>
+    <string name="malagasy_lang_btn_text">Malagasy</string>
+    <string name="malay_lang_btn_text">Bahasa Melayu</string>
+    <string name="maltese_lang_btn_text">Malti</string>
+    <string name="maori_lang_btn_text">Maori</string>
+    <string name="mongolian_lang_btn_text">Монгол</string>
+    <string name="myanmar_lang_btn_text">မြန်မာဘာသာ</string>
+    <string name="nepali_lang_btn_text">नेपाली</string>
+    <string name="norwegian_lang_btn_text">Norsk</string>
+    <string name="pashto_lang_btn_text">پښتو</string>
+    <string name="persian_lang_btn_text">پارسی</string>
+    <string name="polish_lang_btn_text">Język polski</string>
+    <string name="portuguese_lang_btn_text">Portuguesa</string>
+    <string name="romanian_lang_btn_text">Română</string>
+    <string name="russian_lang_btn_text">русский</string>
+    <string name="serbian_lang_btn_text">српски</string>
+    <string name="sinhala_lang_btn_text">සිංහල</string>
+    <string name="slovak_lang_btn_text">Slovenský</string>
+    <string name="slovenian_lang_btn_text">Slovenski</string>
+    <string name="somali_lang_btn_text">Soomaali</string>
+    <string name="spanish_lang_btn_text">Española</string>
+    <string name="swahili_lang_btn_text">Kiswahili</string>
+    <string name="swedish_lang_btn_text">svenska</string>
+    <string name="tajik_lang_btn_text">тоҷикӣ</string>
+    <string name="thai_lang_btn_text">ไทย</string>
+    <string name="turkish_lang_btn_text">Türk</string>
+    <string name="turkmen_lang_btn_text">Türkmen</string>
+    <string name="ukrainian_lang_btn_text">Українська</string>
+    <string name="urdu_lang_btn_text">اردو</string>
+    <string name="uzbek_lang_btn_text">O\'zbek</string>
+    <string name="vietnamese_lang_btn_text">Tiếng Việt</string>
+    <string name="zulu_lang_btn_text">IsiZulu</string>
+    <string name="sign_up_checkbox_text"><![CDATA[Sign up for newsletter & get AED50 off]]></string>
+
+    <string name="recover_dialog_header">Recover password</string>
+    <string name="recover_dialog_message">To retrieve your password, please enter your emai
+        address below and click \'RETRIEVE PASSWORD\'.\n\nA password reset link will then
+        be sent to you by email.</string>
+</resources>

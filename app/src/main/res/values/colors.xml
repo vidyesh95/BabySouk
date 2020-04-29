@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE2572</color>
+    <color name="colorPrimaryDark">#00C853</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="sideNavBarStart">#EF4C8A</color>
+    <color name="sideNavBarCenter">#F66CA1</color>
+    <color name="sideNavBarEnd">#F3317B</color>
+    <color name="colorBottomNavigationIcon">#EE2572</color>
+
+    <color name="colorOriginal">#FAFAFA</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="semiBlack">#66000000</color>
+    <color name="lightSemiBlack">#33000000</color>
+    <color name="lightBlack">#EFEFEF</color>
+    <color name="lighterBlack">#F8F8F8</color>
+    <color name="backgroundWhite">#F7F7F7</color>
+    <color name="colorPrimaryTransparent">#33EE2572</color>
+
+    <color name="light_blue">#FF35B5E5</color>
+    <color name="light_blue_pressed">#FF0099CC</color>
+    <color name="green">#FF99CC00</color>
+    <color name="green_pressed">#FF669900</color>
+    <color name="purple">#FFAA66CC</color>
+    <color name="purple_pressed">#FF9933CC</color>
+    <color name="red">#FFFF4444</color>
+    <color name="red_pressed">#FFCC0000</color>
+    <color name="yellow">#FFFFBB33</color>
+    <color name="yellow_pressed">#FFFF8800</color>
+</resources>

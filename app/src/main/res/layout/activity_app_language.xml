@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/star_background"
+    android:orientation="vertical"
+    tools:context=".AppLanguageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/select_your_region_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:text="@string/select_your_region"
+            android:textColor="@color/semiBlack"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--app:cardElevation="0dp"-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_your_region_text">
+            <!--height wrap content-->
+            <Spinner
+                android:id="@+id/region_drop_down_menu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:popupBackground="@color/backgroundWhite" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/select_language_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/select_preferred_language"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/language_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:checkedButton="@+id/first_language_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_language_text"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/first_language_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:paddingTop="14dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="14dp"
+                android:text="@string/english_lang_btn_text"
+                android:textAppearance="@style/MaterialButtonText"
+                android:textColor="@drawable/selected_button_text_color"
+                android:textSize="18sp"
+                app:backgroundTint="@drawable/selected_button_color"
+                app:rippleColor="@color/colorPrimaryTransparent"
+                app:shapeAppearance="@style/MaterialButton"
+                app:strokeColor="@color/lightBlack"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/second_language_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:paddingTop="14dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="14dp"
+                android:text="@string/arabic_lang_btn_text"
+                android:textAppearance="@style/MaterialButtonText"
+                android:textColor="@drawable/selected_button_text_color"
+                android:textSize="18sp"
+                app:backgroundTint="@drawable/selected_button_color"
+                app:rippleColor="@color/colorPrimaryTransparent"
+                app:shapeAppearance="@style/MaterialButton"
+                app:strokeColor="@color/lightBlack"
+                app:strokeWidth="1dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:paddingLeft="44dp"
+            android:paddingTop="12dp"
+            android:paddingRight="44dp"
+            android:paddingBottom="12dp"
+            android:text="@string/lang_confirm_btn_text"
+            android:textSize="18sp"
+            app:backgroundTint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/language_toggle"
+            app:shapeAppearance="@style/MaterialButton" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_language" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

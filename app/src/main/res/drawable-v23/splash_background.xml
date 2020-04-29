@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/star_background"/>
+        <!--<color android:color="@android:color/white" />
+    </item>-->
+
+    <item android:drawable="@drawable/babysouk_splash"
+        android:width="300dp"
+        android:height="300dp"
+        android:gravity="center"/>
+</layer-list>
