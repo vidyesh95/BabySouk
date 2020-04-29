@@ -11,9 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bcod.babysouk.R;
+import com.bcod.babysouk.databinding.OffersFragmentBinding;
 
 public class OffersFragment extends Fragment {
 
+    private OffersFragmentBinding binding;
     private OffersViewModel mOffersViewModel;
 
     public static OffersFragment newInstance() {
@@ -23,8 +25,9 @@ public class OffersFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.offers_fragment, container, false);
-        return root;
+        binding = OffersFragmentBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        return view;
     }
 
     @Override
@@ -34,4 +37,9 @@ public class OffersFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

@@ -14,6 +14,7 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="semiBlack">#66000000</color>
     <color name="lightSemiBlack">#33000000</color>
+    <color name="lightDarkBlack">#9F000000</color>
     <color name="lightBlack">#EFEFEF</color>
     <color name="lighterBlack">#F8F8F8</color>
     <color name="backgroundWhite">#F7F7F7</color>

@@ -1,7 +1,9 @@
 package com.bcod.babysouk.ui.account;
 
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,9 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bcod.babysouk.R;
+import com.bcod.babysouk.databinding.AccountFragmentBinding;
+import com.bcod.babysouk.ui.account.address.AddressBookFragment;
 
 public class AccountFragment extends Fragment {
 
+    private AccountFragmentBinding binding;
     private AccountViewModel mAccountViewModel;
 
     public static AccountFragment newInstance() {
@@ -25,8 +30,12 @@ public class AccountFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.account_fragment, container, false);
-        return root;
+        binding = AccountFragmentBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        binding.accountAddressBook.setOnClickListener(v -> {
+
+        });
+        return view;
     }
 
     @Override
@@ -36,4 +45,9 @@ public class AccountFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

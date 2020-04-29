@@ -11,9 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bcod.babysouk.R;
+import com.bcod.babysouk.databinding.WishListFragmentBinding;
 
 public class WishListFragment extends Fragment {
 
+    private WishListFragmentBinding binding;
     private WishListViewModel mWishListViewModel;
 
     public static WishListFragment newInstance() {
@@ -23,8 +25,9 @@ public class WishListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.wish_list_fragment, container, false);
-        return root;
+        binding = WishListFragmentBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        return view;
     }
 
     @Override
@@ -34,4 +37,9 @@ public class WishListFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
