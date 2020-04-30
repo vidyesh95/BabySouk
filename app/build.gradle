@@ -61,6 +61,10 @@ dependencies {
     // viewpager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
+    //home_viewpager
+    implementation 'com.youth.banner:banner:2.0.8'
+
+
     // navigation
     implementation 'androidx.navigation:navigation-fragment:2.2.2'
     implementation 'androidx.navigation:navigation-ui:2.2.2'
