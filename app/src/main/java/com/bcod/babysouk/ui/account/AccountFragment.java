@@ -1,23 +1,16 @@
 package com.bcod.babysouk.ui.account;
 
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.ViewModelProvider;
-
-import android.app.FragmentManager;
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bcod.babysouk.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.bcod.babysouk.databinding.AccountFragmentBinding;
-import com.bcod.babysouk.ui.account.address.AddressBookFragment;
 
 public class AccountFragment extends Fragment {
 
