@@ -90,6 +90,9 @@ dependencies {
     // legacy grid layout
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
 
+    //https://github.com/youth5201314/banner
+    implementation 'com.youth.banner:banner:2.0.8'
+
     // tests
 
     // debugImplementation because LeakCanary should only run in debug builds.

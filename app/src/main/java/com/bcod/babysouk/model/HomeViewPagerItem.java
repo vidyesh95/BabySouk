@@ -16,9 +16,9 @@ public class HomeViewPagerItem {
 
     public static List<HomeViewPagerItem> getTestData() {
         List<HomeViewPagerItem> list = new ArrayList<>();
-        list.add(new HomeViewPagerItem(R.drawable.australia, 1));
-        list.add(new HomeViewPagerItem(R.drawable.united_states, 3));
-        list.add(new HomeViewPagerItem(R.drawable.india, 3));
+        list.add(new HomeViewPagerItem(R.drawable.baby_inside_white_bathtub, 1));
+        list.add(new HomeViewPagerItem(R.drawable.adorable_autumn_baby_blur, 2));
+        list.add(new HomeViewPagerItem(R.drawable.two_babies_wearing_white_headdress, 3));
         return list;
     }
 }

@@ -1,6 +1,5 @@
 package com.bcod.babysouk.adapter;
 
-import android.content.Context;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
