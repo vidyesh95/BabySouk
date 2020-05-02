@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/star_background"
     android:orientation="vertical"
+    android:id="@+id/my_profile_fragment_container"
     tools:context=".ui.account.profile.MyProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout

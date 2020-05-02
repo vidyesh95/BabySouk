@@ -3,6 +3,7 @@ package com.bcod.babysouk.ui.account;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -32,7 +33,22 @@ public class AccountFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = AccountFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
+        binding.accountProfile.setOnClickListener(v -> {
+
+        });
+        binding.accountOrders.setOnClickListener(v -> {
+
+        });
         binding.accountAddressBook.setOnClickListener(v -> {
+
+        });
+        binding.accountContactUs.setOnClickListener(v -> {
+
+        });
+        binding.accountRateOurApp.setOnClickListener(v -> {
+
+        });
+        binding.accountSettings.setOnClickListener(v -> {
 
         });
         return view;

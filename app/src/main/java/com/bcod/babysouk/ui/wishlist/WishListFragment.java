@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.bcod.babysouk.R;
 import com.bcod.babysouk.databinding.WishListFragmentBinding;
 
 public class WishListFragment extends Fragment {

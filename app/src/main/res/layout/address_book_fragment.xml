@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/star_background"
+    android:id="@+id/address_book_fragment_container"
     tools:context=".ui.account.address.AddressBookFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout

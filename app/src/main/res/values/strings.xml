@@ -153,4 +153,6 @@
     <string name="recover_dialog_message">To retrieve your password, please enter your emai
         address below and click \'RETRIEVE PASSWORD\'.\n\nA password reset link will then
         be sent to you by email.</string>
+    <string name="click_collect_text"><![CDATA[Click & Collect]]></string>
+    <string name="how_click_collects_works"><u><![CDATA[How Click & Collects Works]]></u></string>
 </resources>
