@@ -8,9 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.bcod.babysouk.R;
 import com.bcod.babysouk.databinding.AccountFragmentBinding;
+import com.bcod.babysouk.ui.account.contact.ContactUsFragment;
 
 public class AccountFragment extends Fragment {
 
@@ -36,7 +39,14 @@ public class AccountFragment extends Fragment {
 
         });
         binding.accountContactUs.setOnClickListener(v -> {
-
+            //current fragment
+            AccountFragment fragment = new AccountFragment();
+            FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+            //replacing fragment id contact_us_fragment_container
+            transaction.replace(R.id.contact_us_fragment_container, fragment);
+            transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            transaction.addToBackStack(null);
+            transaction.commit();
         });
         binding.accountRateOurApp.setOnClickListener(v -> {
 
