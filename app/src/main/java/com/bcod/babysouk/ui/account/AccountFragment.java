@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.bcod.babysouk.R;
 import com.bcod.babysouk.databinding.AccountFragmentBinding;
@@ -30,7 +32,9 @@ public class AccountFragment extends Fragment {
         binding = AccountFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         binding.accountProfile.setOnClickListener(v -> {
-
+            Fragment navhost = getFragmentManager().findFragmentById(R.id.my_profile_fragment_container);
+            NavController navController = NavHostFragment.findNavController(navhost);
+            navController.navigate(R.id.navigation_my_profile);
         });
         binding.accountOrders.setOnClickListener(v -> {
 
