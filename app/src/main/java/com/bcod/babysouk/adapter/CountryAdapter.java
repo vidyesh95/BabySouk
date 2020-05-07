@@ -12,13 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bcod.babysouk.R;
-import com.bcod.babysouk.model.RegionItem;
+import com.bcod.babysouk.model.CountryItem;
+import com.bcod.babysouk.ui.account.settings.SettingsFragment;
 
 import java.util.ArrayList;
 
-public class RegionAdapter extends ArrayAdapter<RegionItem> {
-    public RegionAdapter(@NonNull Context context,  @NonNull ArrayList<RegionItem> regionItemArrayList) {
-        super(context, 0, regionItemArrayList);
+public class CountryAdapter extends ArrayAdapter<CountryItem> {
+
+    public CountryAdapter(@NonNull Context context,
+                          @NonNull ArrayList<CountryItem> mCountryArrayList) {
+        super(context, 0, mCountryArrayList);
     }
 
     // ctrl+o
@@ -39,12 +42,14 @@ public class RegionAdapter extends ArrayAdapter<RegionItem> {
                     LayoutInflater.from(getContext()).inflate(R.layout.region_drop_down_menu_row,
                             parent, false);
         }
-        ImageView imageViewFlag = convertView.findViewById(R.id.region_image);
-        TextView textViewName = convertView.findViewById(R.id.region_name);
-        RegionItem currentItem = getItem(position);
+        ImageView imageViewFlag = convertView.findViewById(R.id.country_flag_image);
+        TextView textViewCountryName = convertView.findViewById(R.id.country_name);
+        TextView textViewCurrencyName = convertView.findViewById(R.id.currency_name);
+        CountryItem currentItem = getItem(position);
         if (currentItem != null) {
             imageViewFlag.setImageResource(currentItem.getFlagImage());
-            textViewName.setText(currentItem.getCountryName());
+            textViewCountryName.setText(currentItem.getCountryName());
+            textViewCurrencyName.setText(currentItem.getCurrency());
         }
         return convertView;
     }

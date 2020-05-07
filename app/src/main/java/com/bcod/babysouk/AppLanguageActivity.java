@@ -394,7 +394,7 @@ public class AppLanguageActivity extends AppCompatActivity {
                 "english"));
         mRegionArrayList.add(new RegionItem("Dominican Republic",
                 R.drawable.dominican_republic, "spanish"));
-        mRegionArrayList.add(new RegionItem("Germany", R.drawable.east_timor,
+        mRegionArrayList.add(new RegionItem("East Timor", R.drawable.east_timor,
                 "portuguese"));
         mRegionArrayList.add(new RegionItem("Ecuador", R.drawable.ecuador,
                 "spanish"));

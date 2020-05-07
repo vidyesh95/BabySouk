@@ -5,20 +5,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bcod.babysouk.R;
-import com.bcod.babysouk.model.RegionItem;
+import com.bcod.babysouk.model.LanguageItem;
+import com.bcod.babysouk.ui.account.settings.SettingsFragment;
 
 import java.util.ArrayList;
 
-public class RegionAdapter extends ArrayAdapter<RegionItem> {
-    public RegionAdapter(@NonNull Context context,  @NonNull ArrayList<RegionItem> regionItemArrayList) {
-        super(context, 0, regionItemArrayList);
+public class LanguageAdapter extends ArrayAdapter<LanguageItem> {
+    public LanguageAdapter(@NonNull Context context, int resource,
+                           @NonNull ArrayList<LanguageItem> languageList) {
+        super(context, 0, languageList);
     }
 
     // ctrl+o
@@ -34,17 +35,15 @@ public class RegionAdapter extends ArrayAdapter<RegionItem> {
     }
 
     private View initView(int position, View convertView, ViewGroup parent) {
-        if (convertView==null) {
-            convertView =
-                    LayoutInflater.from(getContext()).inflate(R.layout.region_drop_down_menu_row,
-                            parent, false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).
+                    inflate(R.layout.language_drop_down_menu_row, parent, false);
         }
-        ImageView imageViewFlag = convertView.findViewById(R.id.region_image);
-        TextView textViewName = convertView.findViewById(R.id.region_name);
-        RegionItem currentItem = getItem(position);
+
+        TextView textViewLanguage = convertView.findViewById(R.id.language_name);
+        LanguageItem currentItem = getItem(position);
         if (currentItem != null) {
-            imageViewFlag.setImageResource(currentItem.getFlagImage());
-            textViewName.setText(currentItem.getCountryName());
+            textViewLanguage.setText(currentItem.getLanguage());
         }
         return convertView;
     }
