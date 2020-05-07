@@ -27,6 +27,7 @@ public class ContactUsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = ContactUsFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
+
         return view;
     }
 
@@ -35,6 +36,7 @@ public class ContactUsFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mContactUsViewModel = new ViewModelProvider(this).get(ContactUsViewModel.class);
         // TODO: Use the ViewModel
+
     }
 
     @Override

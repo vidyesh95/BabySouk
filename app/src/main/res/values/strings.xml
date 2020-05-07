@@ -20,34 +20,365 @@
     <string name="nav_header_subtitle">vidyesh95@gmail.com</string>
     <string name="nav_header_background">Navigation header background</string>
 
-    <string name="menu_baby_essentials">Baby Essentials</string>
-    <string name="menu_stroller_souk">Stroller Souk</string>
-    <string name="menu_car_seats">Car Seats</string>
-    <string name="menu_feed">Feed</string>
-    <string name="menu_bath_time">Bath Time</string>
-    <string name="menu_play_time">Play Time</string>
-    <string name="menu_back_to_school">Back To School</string>
-    <string name="menu_travel_souk">Travel Souk</string>
-    <string name="menu_gift_souk">Gift Souk</string>
-    <string name="menu_outlet">Outlet</string>
-    <string name="menu_by_brand">By Brand</string>
+    <string name="menu_stroller_souk">STROLLER SOUK</string>
+    <string name="menu_baby_essentials">BABY ESSENTIALS</string>
+    <string name="menu_car_seats">CAR SEATS</string>
+    <string name="menu_feed">FEED</string>
+    <string name="menu_bath_time">BATH TIME</string>
+    <string name="menu_play_time">PLAY TIME</string>
+    <string name="menu_back_to_school">BACK TO SCHOOL</string>
+    <string name="menu_travel_souk">TRAVEL SOUK</string>
+    <string name="menu_gift_souk">GIFT SOUK</string>
+    <string name="menu_outlet">OUTLET</string>
+    <string name="menu_by_brand">BY BRAND</string>
     <string name="menu_contact">Contact</string>
 
     <!--Navigation child menu-->
-    <string name="sub_menu_baby_essentials">Baby Essentials</string>
-    <string name="sub_menu_clothing_and_accessories"><![CDATA[Clothing & Accessories]]></string>
-    <string name="sub_menu_decor">Décor</string>
-    <string name="sub_menu_carriers_and_wraps"><![CDATA[Carriers & Wraps]]></string>
-    <string name="sub_menu_sleep_essentials">Sleep Essentials</string>
-    <string name="sub_menu_active_and_safe_parenting"><![CDATA[Active & Safe Parenting]]></string>
-    <string name="sub_menu_all_about_mum">All About Mum</string>
+    <string name="sub_menu_babyessentials_baby_essentials">BABY ESSENTIALS</string>
+    <string name="sub_menu_babyessentials_clothing_and_accessories"><![CDATA[CLOTHING AND ACCESSORIES]]></string>
+    <string name="sub_menu_babyessentials_decor">DECOR</string>
+    <string name="sub_menu_babyessentials_carriers_and_wraps"><![CDATA[CARRIERS & WRAPS]]></string>
+    <string name="sub_menu_babyessentials_sleep_essentials">SLEEP ESSENTIALS</string>
+    <string name="sub_menu_babyessentials_organic_natural_essentials"><![CDATA[ORGANIC & NATURAL ESSENTIALS]]> </string>
+    <string name="sub_menu_babyessentials_active_and_safe_parenting"><![CDATA[ACTIVE & SAFE PARENTING]]></string>
+    <string name="sub_menu_babyessentials_all_about_mum">ALL ABOUT MUM</string>
+    <string name="sub_menu_babyessentials_twins">TWINS</string>
+
+    <string name="sub_menu_stroller_souk_best_seller">BEST SELLERS STROLLER SOUK</string>
+    <string name="sub_menu_stroller_souk_strollers">STROLLERS</string>
+    <string name="sub_menu_stroller_souk_stroller_accessories">STROLLER ACCESSORIES</string>
+    <string name="sub_menu_stroller_souk_stroller_repair">STROLLER REPAIR SERVICES</string>
+    <string name="sub_menu_stroller_souk_stroller_cleaning">STROLLER CLEANING SERVICES</string>
+
+    <string name="sub_menu_car_seats_baby_car_seats">BABY CAR SEATS</string>
+    <string name="sub_menu_car_seats_toddler_car_seats">TODDLER CAR SEATS</string>
+    <string name="sub_menu_car_seats_child_car_seats">CHILD CAR SEATS</string>
+    <string name="sub_menu_car_seats_rear_front_car_seats"><![CDATA[REAR-FACING & FORWARD-FACING CAR SEATS]]></string>
+    <string name="sub_menu_car_seats_covers_accessories"><![CDATA[COVERS & ACCESSORIES]]></string>
+    <string name="sub_menu_car_seats_baby_base_units">BASE UNITS</string>
+
+    <string name="sub_menu_feed_new_arrival">NEW ARRIVALS FEED</string>
+    <string name="sub_menu_feed_bottle_feeding">BOTTLE FEEDING</string>
+    <string name="sub_menu_feed_bibs_burps_cloths"><![CDATA[BIBS & BURP CLOTHS]]></string>
+    <string name="sub_menu_feed_high_chairs_accessories"><![CDATA[HIGH CHAIRS & ACCESSORIES]]></string>
+    <string name="sub_menu_feed_feeding_weaning"><![CDATA[FEEDING & WEANING]]></string>
+    <string name="sub_menu_feed_mealtime_accessories"><![CDATA[MEALTIME & ACCESSORIES]]></string>
+
+    <string name="sub_menu_bathtime_new_arrivals">NEW ARRIVALS BATH TIME</string>
+    <string name="sub_menu_bathtime_tub_accessories"><![CDATA[TUBS & ACCESSORIES]]></string>
+    <string name="sub_menu_bathtime_skincare">SKINCARE</string>
+    <string name="sub_menu_bathtime_toewla_flannels"><![CDATA[TOWELS & FLANNELS]]></string>
+    <string name="sub_menu_bathtime_oral_care">ORAL CARE</string>
+    <string name="sub_menu_bathtime_potty_training">POTTY TRAINING</string>
+
+    <string name="sub_menu_playtime_best_sellers">BEST SELLERS PLAY TIME</string>
+    <string name="sub_menu_playtime_outdoor_plysystems">OUTDOOR PLAY SYSTEMS</string>
+    <string name="sub_menu_playtime_baby_preschool"><![CDATA[BABY & PRESCHOOL]]></string>
+    <string name="sub_menu_playtime_toodlers">TODDLERS</string>
+    <string name="sub_menu_playtime_pretend_play">PRETEND PLAY</string>
+    <string name="sub_menu_playtime_books">BOOKS</string>
+
+    <string name="sub_menu_back_to_school_bags_lunch_boxes"><![CDATA[BAGS & LUNCH BOXES]]></string>
+    <string name="sub_menu_back_to_school_snacktime">SNACKTIME FAVOURITES</string>
+    <string name="sub_menu_back_to_school_drink_bottles_tableware"><![CDATA[DRINK BOTTLES & TABLEWARE]]></string>
+    <string name="sub_menu_back_to_school_stationary_name_labels"><![CDATA[STATIONARY & NAME LABELS]]></string>
+    <string name="sub_menu_back_to_school_waterbottles">WATER BOTTLES</string>
+    <string name="sub_menu_back_to_school_bundle_offers">BUNDLE OFFERS</string>
+
+    <string name="sub_menu_travel_best_seller">BEST SELLERS TRAVEL SOUK</string>
+    <string name="sub_menu_travel_travelling_new_born">TRAVELLING WITH A NEWBORN</string>
+    <string name="sub_menu_travel_carryon_boad_strollers">CARRY ON BOAD STROLLERS</string>
+    <string name="sub_menu_travel_bags_accessories"><![CDATA[BAGS & ACCESSORIES]]></string>
+    <string name="sub_menu_travel_stroller_protect_bags">STROLLER PROTECT BAGS</string>
+    <string name="sub_menu_travel_travel_carriers">TRAVEL CARRIERS</string>
+    <string name="sub_menu_travel_sleep_solutions">TRAVEL SLEEP SOLUTIONS</string>
+    <string name="sub_menu_travel_feed_solutions">TRAVEL FEED SOLUTIONS</string>
+    <string name="sub_menu_travel_toys">TRAVEL TOYS</string>
+
+    <string name="sub_menu_gift_best_seller">BEST SELLERS GIFT SOUK</string>
+    <string name="sub_menu_gift_basket">GIFT BASKETS</string>
+    <string name="sub_menu_gift_voucher">GIFT VOUCHERS</string>
+    <string name="sub_menu_gift_personalised">PERSONALISED GIFTS</string>
+    <string name="sub_menu_gift_jewellery">JEWELLERY</string>
+    <string name="sub_menu_gift_occasion">GIFTS BY OCCASION</string>
+    <string name="sub_menu_gift_price">GIFTS BY PRICE</string>
+    <string name="sub_menu_gift_christmas_souk">CHRISTMAS SOUK</string>
+
+    <string name="sub_menu_brand_beach_bandits"><![CDATA[BEACH & BANDITS]]></string>
+    <string name="sub_menu_brand_baby_art">Baby Art</string>
+    <string name="sub_menu_brand_skip_hop">Skin Hop</string>
+    <string name="sub_menu_brand_4moms_mamaroo">4moms mamaRoo</string>
+    <string name="sub_menu_brand_be_safe">BeSafe</string>
+    <string name="sub_menu_brand_little_lovely_company">A Little Lovely Company</string>
+    <string name="sub_menu_brand_aden_anais"><![CDATA[Aden + Anais]]></string>
+    <string name="sub_menu_brand_alimrose">Alimrose Designs</string>
+    <string name="sub_menu_brand_angelcare">AngelCare</string>
+    <string name="sub_menu_brand_anvi_baby">Avni Baby</string>
+    <string name="sub_menu_brand_babiators">Babiators</string>
+    <string name="sub_menu_brand_baby_jogger">Baby Jogger</string>
+    <string name="sub_menu_brand_babysouk">Babysouk</string>
+    <string name="sub_menu_brand_babyzen">Babyzen</string>
+    <string name="sub_menu_brand_bali_towel">Bali Towel</string>
+    <string name="sub_menu_brand_banana_spirit">Banana Spirit</string>
+    <string name="sub_menu_brand_beatrixNY">BeatrixNY</string>
+    <string name="sub_menu_brand_bebfolie">Bebe Folie</string>
+    <string name="sub_menu_brand_beco">Beco</string>
+    <string name="sub_menu_brand_beaba">Beaba</string>
+    <string name="sub_menu_brand_sleepyhead">Sleepyhead</string>
+    <string name="sub_menu_brand_doomoo">Doomoo</string>
+    <string name="sub_menu_brand_charlie_banana">Charlie Banana</string>
+    <string name="sub_menu_brand_bumpa_mats">Bumpa Mats</string>
+    <string name="sub_menu_brand_toddlekind">Toddlekind</string>
+    <string name="sub_menu_brand_red_castle">Red Castle</string>
+    <string name="sub_menu_brand_misioo">Misioo</string>
+    <string name="sub_menu_brand_wobble_board">Wobble Boatrd</string>
+    <string name="sub_menu_brand_boba">Boba</string>
+    <string name="sub_menu_brand_cuddledry">Cuddledry</string>
+    <string name="sub_menu_brand_jellystones_designs">Jellystones Designs</string>
+    <string name="sub_menu_brand_petit_collage">Petit Collage</string>
+    <string name="sub_menu_brand_paca_pod">Paca Pod</string>
+    <string name="sub_menu_brand_olii_ella">Olii Ella</string>
+    <string name="sub_menu_brand_mountain_buggy">Mountain Buggy</string>
+    <string name="sub_menu_brand_childhome">Childhome</string>
+    <string name="sub_menu_brand_storksak">Storksak</string>
+    <string name="sub_menu_brand_childsfarm">Childs Farm</string>
+    <string name="sub_menu_brand_motorola">Motorola</string>
+    <string name="sub_menu_brand_phils_teds"><![CDATA[Phil & Teds]]></string>
+    <string name="sub_menu_brand_tree_frogs">Tree Frogs</string>
+    <string name="sub_menu_brand_haakaa">Haakaa</string>
+    <string name="sub_menu_brand_ergo_baby">ERGO Baby</string>
+    <string name="sub_menu_brand_matchstick_monkey">Matchstick Monkey</string>
+    <string name="sub_menu_brand_love_to_dream">Love To Dream</string>
+    <string name="sub_menu_brand_sophie_la_girafe">Sophie La Girafe</string>
+    <string name="sub_menu_brand_oil_carol"><![CDATA[Oil & Carol]]></string>
+    <string name="sub_menu_brand_bebe_au_lait">BEBE AU LAIT</string>
+    <string name="sub_menu_brand_hamilton">HAMILTON</string>
+    <string name="sub_menu_brand_nohoo">Nohoo</string>
+    <string name="sub_menu_brand_little_champions">Little Champions</string>
+    <string name="sub_menu_brand_milestone_cards">Milestone Cards</string>
+    <string name="sub_menu_brand_puj">Puj</string>
+    <string name="sub_menu_brand_four_cow_farm">Four Cow Farm</string>
+    <string name="sub_menu_brand_camel_bak">Camel Bak</string>
+    <string name="sub_menu_brand_breatheable_baby">Breathable Baby</string>
+    <string name="sub_menu_brand_bobo_boo"><![CDATA[Bobo&boo]]></string>
+    <string name="sub_menu_brand_nose_frida">Nose Frida</string>
+    <string name="sub_menu_brand_vilac">Vilac</string>
+    <string name="sub_menu_brand_boon">Boon</string>
+    <string name="sub_menu_brand_britax">Britax</string>
+    <string name="sub_menu_brand_coega_sunwear">Coega Sunwear</string>
+    <string name="sub_menu_brand_comotomo">Comotomo</string>
+    <string name="sub_menu_brand_doddl">Doddl</string>
+    <string name="sub_menu_brand_done_by_deer">Done By Deer</string>
+    <string name="sub_menu_brand_easywalker">Easywalker</string>
+    <string name="sub_menu_brand_easykids">EasyKids</string>
+    <string name="sub_menu_brand_ecover">Ecover</string>
+    <string name="sub_menu_brand_floss_rock"><![CDATA[Floss & Rock]]></string>
+    <string name="sub_menu_brand_forget_me_not">Forget Me Not</string>
+    <string name="sub_menu_brand_gb_pockit"> <![CDATA[GB Pockit+]]></string>
+    <string name="sub_menu_brand_happy_bubble">Happy Bubble</string>
+    <string name="sub_menu_brand_hape">Hape</string>
+    <string name="sub_menu_brand_happy_jackson">Happy Jackson</string>
+    <string name="sub_menu_brand_impressions">Impressions</string>
+    <string name="sub_menu_brand_jack_jill"><![CDATA[Jack N\' Jill]]></string>
+    <string name="sub_menu_brand_jellycat">Jellycat</string>
+    <string name="sub_menu_brand_just_gentle">Just Gentle</string>
+    <string name="sub_menu_brand_kids_fly_safe">Kids Fly Safe</string>
+    <string name="sub_menu_brand_little_unicorn">Little Unicorn</string>
+    <string name="sub_menu_brand_lulujo_baby">Lulujo Baby</string>
+    <string name="sub_menu_brand_lunch_bots">Lunch Bots</string>
+    <string name="sub_menu_brand_maxi_cosi">Maxi Cosi</string>
+    <string name="sub_menu_brand_medela">Medela</string>
+    <string name="sub_menu_brand_melissa_doug"><![CDATA[Melissa & Doug]]></string>
+    <string name="sub_menu_brand_merino_kids">Merino Kids</string>
+    <string name="sub_menu_brand_mifold_hifold"><![CDATA[mifold / hifold]]></string>
+    <string name="sub_menu_brand_mima">Mima</string>
+    <string name="sub_menu_brand_mimijumi">Mimijumi</string>
+    <string name="sub_menu_brand_montico">Montico</string>
+    <string name="sub_menu_brand_moulin_roty">Moulin Roty</string>
+    <string name="sub_menu_brand_mum_to_mum">Mum 2 MUM</string>
+    <string name="sub_menu_brand_my_buddy_buggy">My Buddy Buggy</string>
+    <string name="sub_menu_brand_naty">Naty</string>
+    <string name="sub_menu_brand_omy">OMY</string>
+    <string name="sub_menu_brand_penny_scallan">Penny Scallan</string>
+    <string name="sub_menu_brand_petit_monkey">Petit Monkey</string>
+    <string name="sub_menu_brand_play_go"><![CDATA[PLay & Go]]></string>
+    <string name="sub_menu_brand_playon_crayon">Play Crayon</string>
+    <string name="sub_menu_brand_pure_born">PureBorn</string>
+    <string name="sub_menu_brand_rice">Rice</string>
+    <string name="sub_menu_brand_robeez">Robeez</string>
+    <string name="sub_menu_brand_rock_ruddle"><![CDATA[Rock & Ruddle]]></string>
+    <string name="sub_menu_brand_rosti_mepal">Rosti Mepal</string>
+    <string name="sub_menu_brand_safehead">Safehead</string>
+    <string name="sub_menu_brand_sassi_junior">SASSI Junior</string>
+    <string name="sub_menu_brand_soyoung">SoYoung</string>
+    <string name="sub_menu_brand_sparklesouk_by_babysouk">Sparkle Souk By Babysouk</string>
+    <string name="sub_menu_brand_step">Step 2</string>
+    <string name="sub_menu_brand_stuck_on_u">Stuck On You</string>
+    <string name="sub_menu_brand_suavenix">Suavenix</string>
+    <string name="sub_menu_brand_super_petit">Super Petit</string>
+    <string name="sub_menu_brand_tach">Tach</string>
+    <string name="sub_menu_brand_the_kids_hq">The Kids HQ</string>
+    <string name="sub_menu_brand_the_launch_punch">The Luch Punch</string>
+    <string name="sub_menu_brand_thermos">Thermos</string>
+    <string name="sub_menu_brand_tiddley_pom">Tiddley Pom</string>
+    <string name="sub_menu_brand_tiger_tribe">Tiger Tribe</string>
+    <string name="sub_menu_brand_trumpet">Trumpette</string>
+    <string name="sub_menu_brand_trunki">Trunki</string>
+    <string name="sub_menu_brand_tummy_tie">Tummy Tie</string>
+    <string name="sub_menu_brand_usborne">Usborne</string>
+    <string name="sub_menu_brand_viga_toys">Viga Toys</string>
+    <string name="sub_menu_brand_water_wipes">Water Wipes</string>
+    <string name="sub_menu_brand_woombie">Woombie</string>
+    <string name="sub_menu_brand_yookidoo">Yookidoo</string>
+    <string name="sub_menu_brand_yumbox">Yumbox</string>
+    <string name="sub_menu_brand_zip_zoe"><![CDATA[Zip & Zoe]]></string>
+    <string name="sub_menu_brand_zoli">Zoli</string>
+    <string name="sub_menu_brand_life_factory">Lifefactory</string>
+    <string name="sub_menu_brand_wubbanub">WubbaNub</string>
+    <string name="sub_menu_brand_hutch_putch"><![CDATA[Hutch & Putch]]></string>
+    <string name="sub_menu_brand_sprouts">3 Sprouts</string>
+    <string name="sub_menu_brand_sparkle">Sparkle</string>
+    <string name="sub_menu_brand_hashi">HASHI</string>
+    <string name="sub_menu_brand_the_mummy_hook">The Mummy Hook</string>
+    <string name="sub_menu_brand_charli_chair">Charli Chair</string>
+    <string name="sub_menu_brand_pottete_plus">Pottete Plus</string>
+    <string name="sub_menu_brand_cheeky_chompers">Cheeky Chompers</string>
+    <string name="sub_menu_brand_dr_browns">Dr.Browns</string>
+    <string name="sub_menu_brand_pure_elements">Pure Elements</string>
+    <string name="sub_menu_brand_my_brest_friend">MyBrestFriend</string>
+    <string name="sub_menu_brand_sunveno">Sunveno</string>
+    <string name="sub_menu_brand_lunchpunch">Lunchpunch</string>
+    <string name="sub_menu_brand_herobility">Herobility</string>
+    <string name="sub_menu_brand_eco_rascals">Eco Rascals</string>
+    <string name="sub_menu_brand_micro_scooters">Micro Scooters</string>
 
     <!--Navigation sub child menu-->
-    <string name="extra_sub_menu_baby_gifts">Baby Gifts</string>
-    <string name="extra_sub_menu_babaysuits_and_onesies"><![CDATA[Babysuits & Onesies]]></string>
-    <string name="extra_sub_menu_nightwear">Nightwear</string>
-    <string name="extra_sub_menu_socks_shoes_and_hats"><![CDATA[Socks, Shoes & Hats]]></string>
-    <string name="extra_sub_menu_swimwear_and_swim_towels"><![CDATA[Swimwear & Swim Towels]]></string>
+    <string name="extra_sub_menu_babyessentials_diaper_change">Diaper/ Change Bags</string>
+    <string name="extra_sub_menu_babyessentials_diaper_wipes"><![CDATA[Diaper & Wipes]]></string>
+    <string name="extra_sub_menu_babyessentials_pacifer_teething"><![CDATA[Pacifiers & Teething Toys]]></string>
+    <string name="extra_sub_menu_babyessentials_skincare">Skincare</string>
+
+    <string name="extra_sub_menu_sleepessentials_bassibets_cribs"><![CDATA[Bassinets & Bedside Cribs]]></string>
+    <string name="extra_sub_menu_sleepessentials_sleeping_bags_blankets"><![CDATA[Sleeping Bags & Blankets]]></string>
+    <string name="extra_sub_menu_sleepessentials_swaddles">Swaddles</string>
+    <string name="extra_sub_menu_sleepessentials_sleep_safe">Sleep Safe</string>
+    <string name="extra_sub_menu_sleepessentials_sheets_blankets_linens"><![CDATA[Sheets, Blankets & Linens]]></string>
+
+    <string name="extra_sub_menu_carriersandwraps_structured_carriers">Structured Carriers</string>
+    <string name="extra_sub_menu_carriersandwraps_4position_allinone">4 position all in one carriers</string>
+    <string name="extra_sub_menu_carriersandwraps_wraps">Wraps</string>
+    <string name="extra_sub_menu_carriersandwraps_travel">Travel Carriers</string>
+    <string name="extra_sub_menu_carriersandwraps_accessories">Carrier Accessories</string>
+
+    <string name="extra_sub_menu_decor_cribs_furnitue"><![CDATA[Cribs & Furniture]]></string>
+    <string name="extra_sub_menu_decor_playmats">Playmats</string>
+    <string name="extra_sub_menu_decor_lighting_nightlights"><![CDATA[Lightings & Nightlights]]></string>
+    <string name="extra_sub_menu_decor_storage_organisation"><![CDATA[Storage & Organisation]]></string>
+    <string name="extra_sub_menu_decor_bedding">Bedding</string>
+
+    <string name="extra_sub_menu_clothingandaccessories_babaysuits_onesies"><![CDATA[Babysuits & Onesies]]></string>
+    <string name="extra_sub_menu_clothingandaccessories_socks_shoes_hats"><![CDATA[Socks, Shoes & Hats]]></string>
+    <string name="extra_sub_menu_clothingandaccessories_sunglasses">Sunglasses</string>
+    <string name="extra_sub_menu_clothingandaccessories_swimwear_swim_towels"><![CDATA[Swimwear & Swim Towels]]></string>
+
+    <string name="extra_sub_menu_active_safeparenting_health_safety"><![CDATA[Health & Safety]]></string>
+    <string name="extra_sub_menu_active_safeparenting_monitor_purifiers"><![CDATA[Monitors & Purifiers]]></string>
+    <string name="extra_sub_menu_active_safeparenting_detergents_softners"><![CDATA[Detergents & Softners]]></string>
+    <string name="extra_sub_menu_active_safeparenting_baby_parenting_books"><![CDATA[Baby & Parenting Books]]></string>
+
+    <string name="extra_sub_menu_all_about_mum_maternity_basics">Maternity Basics</string>
+    <string name="extra_sub_menu_all_about_mum_skincare_for_mum">Skincare For Mum</string>
+    <string name="extra_sub_menu_all_about_mum_post_birth_recovery">Post Birth Recovery</string>
+
+    <string name="extra_sub_menu_strollers_double">Double Strollers</string>
+    <string name="extra_sub_menu_strollers_jogging">Jogging Strollers</string>
+    <string name="extra_sub_menu_strollers_travel">Travel Strollers</string>
+    <string name="extra_sub_menu_strollers_travel_system_pushchairs"><![CDATA[Travel Systems & Pushchairs]]></string>
+    <string name="extra_sub_menu_strollers_twin">Twin Strollers</string>
+
+    <string name="extra_sub_menu_stroller_accessories_adaptors">Adaptors</string>
+    <string name="extra_sub_menu_stroller_accessories_bags_clips">Bags and Clips</string>
+    <string name="extra_sub_menu_stroller_accessories_blankets_toys">Blankets and Toys</string>
+    <string name="extra_sub_menu_stroller_accessories_bunper_bars">Bumper Bars</string>
+    <string name="extra_sub_menu_stroller_accessories_carrycots_bassinets">CarryCots , Bassinets</string>
+    <string name="extra_sub_menu_stroller_accessories_liners_inserts_colorpacks">Liners, Insert and Color Packs</string>
+    <string name="extra_sub_menu_stroller_accessories_second_seats">Second Seats</string>
+    <string name="extra_sub_menu_stroller_accessories_sun_rain_insect_covers"><![CDATA[Sun, Rain & Insect Covers]]></string>
+    <string name="extra_sub_menu_stroller_accessories_trays_cupholders"><![CDATA[Trays & Cup Holders]]></string>
+    <string name="extra_sub_menu_stroller_accessories_wheelie_buggy_boards">Wheelie, Buggy Boards</string>
+
+    <string name="extra_sub_menu_stroller_repair_puncture_repair"><![CDATA[Puncture Repair & Spare Wheels]]></string>
+
+    <string name="extra_sub_menu_newarrivals_feed_breast_feeding">BREAST FEEDING</string>
+    <string name="extra_sub_menu_newarrivals_feed_breast_pumps">Breast Pumps</string>
+    <string name="extra_sub_menu_newarrivals_feed_nursing_covers">Nursing covers</string>
+    <string name="extra_sub_menu_newarrivals_feed_breast_care">Breast Care</string>
+    <string name="extra_sub_menu_newarrivals_feed_pillows_support"><![CDATA[Pillows & Support]]></string>
+    <string name="extra_sub_menu_newarrivals_feed_breastmilk_storage_bags"><![CDATA[Breastmilk Storage & Bags]]></string>
+
+    <string name="extra_sub_menu_bottle_feeding_bottles">Bottles</string>
+    <string name="extra_sub_menu_bottle_feeding_formula">Formula Preparation</string>
+    <string name="extra_sub_menu_bottle_feeding_washing"><![CDATA[Washing & Drying]]></string>
+
+    <string name="extra_sub_menu_feeding_weaning_food_processers">Food Processers</string>
+    <string name="extra_sub_menu_feeding_weaning_food_accessories">Food Accessories</string>
+    <string name="extra_sub_menu_feeding_weaning_food_storage">Food Storage</string>
+
+    <string name="extra_sub_menu_mealtime_bowls_plates"><![CDATA[Bowls & Plates]]></string>
+    <string name="extra_sub_menu_mealtime_cups_beakers"><![CDATA[Cups & Beakers]]></string>
+    <string name="extra_sub_menu_mealtime_utensils">Utensils</string>
+    <string name="extra_sub_menu_mealtime_feeding_on_move">Feeding on the move</string>
+
+    <string name="extra_sub_menu_bathtime_bath_tubs_seats"><![CDATA[Bathing Tubs & Seats]]></string>
+    <string name="extra_sub_menu_bathtime_bath_toys">Bath Toys</string>
+    <string name="extra_sub_menu_bathtime_bath_storage_accessories"><![CDATA[Bath Storage & Accessories]]></string>
+    <string name="extra_sub_menu_bathtime_bath_thermometers">Bath Thermometers</string>
+    <string name="extra_sub_menu_bathtime_grooming_kits">Grooming Kits</string>
+
+    <string name="extra_sub_menu_skincare_hair_body"><![CDATA[Hair & Body]]></string>
+    <string name="extra_sub_menu_skincare_lotions_creame"><![CDATA[Lotions & Creams]]></string>
+
+    <string name="extra_sub_menu_oralcare_toothpaste">Toothpaste</string>
+    <string name="extra_sub_menu_oralcare_toothbrush">Toothbrushes</string>
+
+    <string name="extra_sub_menu_babyandPreschool_playmats_activity"><![CDATA[Play Mats & Activity Gyms]]></string>
+    <string name="extra_sub_menu_babyandPreschool_bouncers">Bouncers</string>
+    <string name="extra_sub_menu_babyandPreschool_softtoys_comforters"><![CDATA[Soft Toys & Comforters]]></string>
+    <string name="extra_sub_menu_babyandPreschool_early_development">Early Development</string>
+    <string name="extra_sub_menu_babyandPreschool_baby_wooden_toys">Baby Wooden Toys</string>
+    <string name="extra_sub_menu_babyandPreschool_walkers">Walkers</string>
+
+    <string name="extra_sub_menu_toddlers_wooden_toys">Wooden Toys</string>
+    <string name="extra_sub_menu_toddlers_scooters_rideons">Scooters and Ride-ons</string>
+    <string name="extra_sub_menu_toddlers_development_toys">Development Toys</string>
+    <string name="extra_sub_menu_toddlers_puzzles_games"><![CDATA[Puzzles & Games]]></string>
+
+    <string name="extra_sub_menu_pretend_play_dolls_house">Dolls House</string>
+    <string name="extra_sub_menu_pretend_play_boys_toys">Boys Classic Toys</string>
+    <string name="extra_sub_menu_pretend_play_girls_toys">Girls Classic Toys</string>
+
+    <string name="extra_sub_menu_books_baby">Baby Books</string>
+    <string name="extra_sub_menu_books_toddlers">Toddler Books</string>
+
+    <string name="extra_sub_menu_gifts_by_occasion_newborn">Newborn Gifts</string>
+    <string name="extra_sub_menu_gifts_by_occasion_babyshower">Baby Shower Gifts</string>
+    <string name="extra_sub_menu_gifts_by_occasion_gender_neutral">Gender Neutral Gifts</string>
+    <string name="extra_sub_menu_gifts_by_occasion_eid">Eid Gifts</string>
+    <string name="extra_sub_menu_gifts_by_occasion_1st_birthday">1st Birthday</string>
+    <string name="extra_sub_menu_gifts_by_occasion_2nd_birthday">2nd Birthday</string>
+    <string name="extra_sub_menu_gifts_by_occasion_3rd_birthday">3rd Birthday</string>
+
+    <string name="extra_sub_menu_gifts_by_price_under_100">gift under 100</string>
+    <string name="extra_sub_menu_gifts_by_price_under_250">gift under 250</string>
+    <string name="extra_sub_menu_gifts_by_price_under_400">gift under 400</string>
+    <string name="extra_sub_menu_gifts_by_price_under_600">gift under 600</string>
+    <string name="extra_sub_menu_gifts_by_price_under_1000">gift under 1000</string>
+
+    <string name="extra_sub_menu_christmas_souk_1st_christmas"><![CDATA[Babys First Christmas]]></string>
+    <string name="extra_sub_menu_christmas_souk_boys">Gifts for Boys</string>
+    <string name="extra_sub_menu_christmas_souk_girls">Gifts for Girls</string>
+    <string name="extra_sub_menu_christmas_souk_mom_dad"><![CDATA[Gifts for Mums & Dads]]></string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -67,7 +398,7 @@
     <string name="select_region_hint">Select Region</string>
     <string name="select_preferred_language">Select preferred language</string>
     <string name="lang_confirm_btn_text">GET STARTED</string>
-    
+
     <string-array name="enquiry">
         <item>How did you heard about us ?</item>
         <item>Web commercial</item>
@@ -164,5 +495,68 @@
     <string name="dubai_warehouse_text"><b>Dubai Warehouse</b>\n\nWarehouse 5, Street 10a,\nAl Quoz
         Industrial 3, Dubai\n\n <u>View on map</u>\n\nTimings :\nSun-Thu : 08:30 am to 05:30pm\nSat :
         08:30 am to 1:30pm</string>
-    <string name="riyadh_warehouse_text">Riyadh Warehouse\n\nWarehouse 5, Street 10a,\nAl Quoz Industrial 3, Dubai\n\n View on map\n\nTimings :\nSun-Thu : 08:30 am to 05:30pm\nSat : 08:30 am to 1:30pm</string>
+    <string name="riyadh_warehouse_text">Riyadh Warehouse\n\nWarehouse 5, Street 10a,\nAl Quoz Industrial 3,
+        Dubai\n\n View on map\n\nTimings :\nSun-Thu : 08:30 am to 05:30pm\nSat : 08:30 am to 1:30pm</string>
+
+    <string name="my_account">My Account</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_orders">My Orders</string>
+    <string name="address_book">Address Book</string>
+    <string name="contact_us">Contact us</string>
+    <string name="rate_our_app">Rate our app</string>
+    <string name="settings">Settings</string>
+    <string name="sign_out">SIGN OUT</string>
+
+    <string name="sign_in_btn">SIGN IN</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="dont_have_an_account">Dont have an account?</string>
+
+    <string name="welcome">Welcome !</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="your_name">Your Name</string>
+    <string name="email_id">E-mail id</string>
+    <string name="create_password">Create Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">REGISTER</string>
+
+    <string name="add_address_for_delivery">Add address for delivery</string>
+    <string name="add_new_address">ADD NEW ADDRESS</string>
+
+    <string name="premium_brands">Top premium brands</string>
+    <string name="new_arrivals">New Arrivals</string>
+
+    <string name="call">Call</string>
+    <string name="chat">Chat</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="write_to_us">Write to us</string>
+    <string name="name">Name</string>
+    <string name="country">Country</string>
+    <string name="phone">Phone</string>
+    <string name="your_phone">Phone Number</string>
+    <string name="submit">SUBMIT</string>
+
+    <string name="recently_viewed">Recently viewed</string>
+    <string name="exclusicve_offers">Exclusive offers</string>
+
+    <string name="pull_up_for_older_orders">Pull up for Older orders</string>
+
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="save_details">SAVE DETAILS</string>
+
+    <string name="come_again_for_more_offers">Come again to see more offers</string>
+
+    <string name="retrive_password">RETRIEVE PASSWORD</string>
+
+    <string name="notification">Notification</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="language">Language</string>
+
+    <string name="showing_items">Showing 0 items</string>
+
 </resources>
