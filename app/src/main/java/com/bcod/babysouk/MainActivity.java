@@ -1,5 +1,6 @@
 package com.bcod.babysouk;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         View view = activityMainBinding.getRoot();
         setContentView(view);
         setSupportActionBar(activityMainBinding.toolbar);
+        context = this;
 
         initNavigationRecyclerView();
         //initSubNavigationRecyclerView();
@@ -71,10 +74,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this,
                 R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(activityMainBinding.bottomNavView, navController);
+
     }
 
     private void initNavigationRecyclerView() {
-        ArrayList<NavigationItem> navigationItemList = new ArrayList<>();
+        ArrayList<NavigationItem> navigationItemList = new ArrayList<NavigationItem>();
         navigationItemList.add(new NavigationItem(R.string.menu_baby_essentials, true));
         navigationItemList.add(new NavigationItem(R.string.menu_stroller_souk, false));
         navigationItemList.add(new NavigationItem(R.string.menu_car_seats, false));
@@ -88,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
         navigationItemList.add(new NavigationItem(R.string.menu_by_brand, true));
         navigationItemList.add(new NavigationItem(R.string.menu_contact, false));
 
+
+
+
         activityMainBinding.navViewCustom.navigationMenu.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         RecyclerView.Adapter mAdapter = new NavigationAdapter(navigationItemList);
@@ -100,19 +107,23 @@ public class MainActivity extends AppCompatActivity {
 
     private void initSubNavigationRecyclerView() {
         ArrayList<SubNavigationItem> subNavigationItemList = new ArrayList<>();
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_baby_essentials,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_baby_essentials,
                 false));
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_clothing_and_accessories,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_clothing_and_accessories,
                 false));
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_decor,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_decor,
                 false));
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_carriers_and_wraps,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_carriers_and_wraps,
                 false));
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_sleep_essentials,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_sleep_essentials,
                 false));
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_active_and_safe_parenting,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_active_and_safe_parenting,
                 false));
-        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_all_about_mum,
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_all_about_mum,
+                false));
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_twins,
+                false));
+        subNavigationItemList.add(new SubNavigationItem(R.string.sub_menu_babyessentials_organic_natural_essentials,
                 false));
 
         RecyclerView mSubRecyclerView = findViewById(R.id.expanded_menu_layout);

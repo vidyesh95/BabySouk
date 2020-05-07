@@ -98,6 +98,7 @@ public class NavigationAdapter extends RecyclerView.Adapter {
                     changeRotate(indicatorImage, 90f, 0f).start();
                 }
             });
+
         }
     }
 
