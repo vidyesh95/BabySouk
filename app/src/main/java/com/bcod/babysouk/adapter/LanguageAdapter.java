@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 
 import com.bcod.babysouk.R;
 import com.bcod.babysouk.model.LanguageItem;
-import com.bcod.babysouk.ui.account.settings.SettingsFragment;
 
 import java.util.ArrayList;
 
