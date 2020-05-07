@@ -71,6 +71,7 @@
                             android:hint="@string/first_name"
                             android:inputType="textPersonName"
                             android:maxLength="10"
+                            android:gravity="end"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                             android:textSize="16sp" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -96,6 +97,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/last_name"
+                            android:gravity="end"
                             android:inputType="textPersonName"
                             android:maxLength="10"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -124,6 +126,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/your_phone"
                             android:inputType="phone"
+                            android:gravity="end"
                             android:maxLength="11"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                             android:textSize="16sp" />
@@ -150,6 +153,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/email_address"
+                            android:gravity="end"
                             android:inputType="textEmailAddress"
                             android:maxLength="320"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"

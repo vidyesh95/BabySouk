@@ -2,9 +2,11 @@ package com.bcod.babysouk.ui.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +19,7 @@ import com.bcod.babysouk.databinding.HomeFragmentBinding;
 import com.bcod.babysouk.model.HomeViewPagerItem;
 import com.youth.banner.Banner;
 import com.youth.banner.indicator.CircleIndicator;
+
 
 public class HomeFragment extends Fragment {
 

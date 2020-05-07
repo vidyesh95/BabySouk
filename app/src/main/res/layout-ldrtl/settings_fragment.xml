@@ -102,7 +102,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/notification_line_one" />
 
                     <Spinner
-                        android:id="@+id/country_drop_down_menu"
+                        android:id="@+id/region_currency_drop_down_menu"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_marginEnd="24dp"
@@ -123,7 +123,7 @@
                         android:background="@color/semiBlack"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/country_drop_down_menu" />
+                        app:layout_constraintTop_toBottomOf="@+id/region_currency_drop_down_menu" />
 
                     <TextView
                         android:id="@+id/language_text"

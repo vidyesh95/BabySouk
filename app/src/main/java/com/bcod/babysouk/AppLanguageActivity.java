@@ -1,5 +1,6 @@
 package com.bcod.babysouk;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +15,12 @@ import com.google.android.material.button.MaterialButtonToggleGroup;
 
 import java.util.ArrayList;
 
+
 public class AppLanguageActivity extends AppCompatActivity {
 
     private ActivityAppLanguageBinding activityAppLanguageBinding;
     private ArrayList<RegionItem> mRegionArrayList;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,10 @@ public class AppLanguageActivity extends AppCompatActivity {
         activityAppLanguageBinding = ActivityAppLanguageBinding.inflate(getLayoutInflater());
         View view = activityAppLanguageBinding.getRoot();
         setContentView(view);
+        context = this;
+
         initList();
+
         RegionAdapter mRegionAdapter = new RegionAdapter(this, mRegionArrayList);
         activityAppLanguageBinding.regionDropDownMenu.setAdapter(mRegionAdapter);
         activityAppLanguageBinding.regionDropDownMenu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
