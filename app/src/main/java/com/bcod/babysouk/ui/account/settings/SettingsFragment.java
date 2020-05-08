@@ -1,5 +1,6 @@
 package com.bcod.babysouk.ui.account.settings;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,7 @@ public class SettingsFragment extends Fragment {
     private SettingsViewModel mSettingsViewModel;
     private ArrayList<CountryItem> mCountryArrayList;
     private ArrayList<LanguageItem> mLanguageArrayList;
+    private Context context;
 
     public static SettingsFragment newInstance() {
         return new SettingsFragment();
@@ -37,14 +39,16 @@ public class SettingsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = SettingsFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
+        assert container != null;
+        context = container.getContext();
         initCountryList();
         initLanguageList();
         // TODO Contructor context
-        /*CountryAdapter mRegionAdapter = new CountryAdapter(this,
-                mCountryArrayList);
+        CountryAdapter mRegionAdapter = new CountryAdapter(context, mCountryArrayList);
+        assert binding.countryDropDownMenu != null;
         binding.countryDropDownMenu.setAdapter(mRegionAdapter);
-        LanguageAdapter mAdapter = new LanguageAdapter(this, mLanguageArrayList);
-        binding.languageDropDownMenu.setAdapter(mAdapter);*/
+        LanguageAdapter mAdapter = new LanguageAdapter(context, mLanguageArrayList);
+        binding.languageDropDownMenu.setAdapter(mAdapter);
         binding.languageDropDownMenu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

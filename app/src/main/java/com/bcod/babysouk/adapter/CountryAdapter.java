@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 
 import com.bcod.babysouk.R;
 import com.bcod.babysouk.model.CountryItem;
-import com.bcod.babysouk.ui.account.settings.SettingsFragment;
 
 import java.util.ArrayList;
 
@@ -39,7 +38,7 @@ public class CountryAdapter extends ArrayAdapter<CountryItem> {
     private View initView(int position, View convertView, ViewGroup parent) {
         if (convertView==null) {
             convertView =
-                    LayoutInflater.from(getContext()).inflate(R.layout.region_drop_down_menu_row,
+                    LayoutInflater.from(getContext()).inflate(R.layout.country_currency_drop_down_menu_row,
                             parent, false);
         }
         ImageView imageViewFlag = convertView.findViewById(R.id.country_flag_image);
