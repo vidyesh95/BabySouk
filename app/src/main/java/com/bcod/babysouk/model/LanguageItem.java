@@ -1,13 +1,13 @@
 package com.bcod.babysouk.model;
 
 public class LanguageItem {
-    private int Language;
-
-    public int getLanguage() {
-        return Language;
-    }
+    private int language;
 
     public LanguageItem(int language) {
-        Language = language;
+        this.language = language;
+    }
+
+    public int getLanguage() {
+        return language;
     }
 }

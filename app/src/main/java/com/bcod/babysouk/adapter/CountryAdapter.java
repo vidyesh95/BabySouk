@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,11 +15,10 @@ import com.bcod.babysouk.model.CountryItem;
 
 import java.util.ArrayList;
 
-public class CountryAdapter extends ArrayAdapter<CountryItem> {
-
+public class CountryAdapter extends ArrayAdapter {
     public CountryAdapter(@NonNull Context context,
-                          @NonNull ArrayList<CountryItem> mCountryArrayList) {
-        super(context, 0, mCountryArrayList);
+                           @NonNull ArrayList<CountryItem> countryItemArrayList) {
+        super(context, 0, countryItemArrayList);
     }
 
     // ctrl+o
@@ -36,19 +34,15 @@ public class CountryAdapter extends ArrayAdapter<CountryItem> {
     }
 
     private View initView(int position, View convertView, ViewGroup parent) {
-        if (convertView==null) {
-            convertView =
-                    LayoutInflater.from(getContext()).inflate(R.layout.country_currency_drop_down_menu_row,
-                            parent, false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).
+                    inflate(R.layout.country_drop_down_menu_row, parent, false);
         }
-        ImageView imageViewFlag = convertView.findViewById(R.id.country_flag_image);
-        TextView textViewCountryName = convertView.findViewById(R.id.country_name);
-        TextView textViewCurrencyName = convertView.findViewById(R.id.currency_name);
-        CountryItem currentItem = getItem(position);
+
+        TextView textViewLanguage = convertView.findViewById(R.id.country_name_drop_down);
+        CountryItem currentItem = (CountryItem) getItem(position);
         if (currentItem != null) {
-            imageViewFlag.setImageResource(currentItem.getFlagImage());
-            textViewCountryName.setText(currentItem.getCountryName());
-            textViewCurrencyName.setText(currentItem.getCurrency());
+            textViewLanguage.setText(currentItem.getCountryName());
         }
         return convertView;
     }
