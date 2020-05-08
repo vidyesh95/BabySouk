@@ -16,7 +16,7 @@ import com.bcod.babysouk.model.LanguageItem;
 import java.util.ArrayList;
 
 public class LanguageAdapter extends ArrayAdapter<LanguageItem> {
-    public LanguageAdapter(@NonNull Context context, int resource,
+    public LanguageAdapter(@NonNull Context context,
                            @NonNull ArrayList<LanguageItem> languageList) {
         super(context, 0, languageList);
     }

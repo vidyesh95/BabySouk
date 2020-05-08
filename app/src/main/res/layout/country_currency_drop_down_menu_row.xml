@@ -28,7 +28,7 @@
         android:text="@string/country_name"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/country_currency_image"
+        app:layout_constraintStart_toEndOf="@+id/country_flag_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

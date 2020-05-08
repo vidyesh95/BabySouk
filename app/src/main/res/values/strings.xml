@@ -963,6 +963,8 @@
     <string name="pull_up_for_older_orders">Pull up for Older orders</string>
 
     <string name="change_password">CHANGE PASSWORD</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
     <string name="save_details">SAVE DETAILS</string>
 
     <string name="come_again_for_more_offers">Come again to see more offers</string>
@@ -975,5 +977,6 @@
     <string name="language">Language</string>
 
     <string name="showing_items">Showing 0 items</string>
+    <string name="saved_address">SAVED ADDRESS</string>
 
 </resources>
