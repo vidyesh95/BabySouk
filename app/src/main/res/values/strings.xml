@@ -930,7 +930,7 @@
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password</string>
-    <string name="dont_have_an_account">Dont have an account?</string>
+    <string name="dont_have_an_account">Don\'t have an account ?</string>
 
     <string name="welcome">Welcome !</string>
     <string name="first_name">First Name</string>
@@ -967,7 +967,7 @@
 
     <string name="come_again_for_more_offers">Come again to see more offers</string>
 
-    <string name="retrive_password">RETRIEVE PASSWORD</string>
+    <string name="retrieve_password">RETRIEVE PASSWORD</string>
 
     <string name="notification">Notification</string>
     <string name="on">On</string>
