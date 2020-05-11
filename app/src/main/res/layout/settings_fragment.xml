@@ -105,12 +105,14 @@
                         android:id="@+id/country_drop_down_menu"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
                         android:layout_marginEnd="24dp"
                         android:layout_marginRight="24dp"
                         android:popupBackground="@color/backgroundWhite"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/country_text"
-                        app:layout_constraintTop_toBottomOf="@+id/notification_line_one" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/country_text" />
 
                     <View
                         android:id="@+id/notification_line_two"

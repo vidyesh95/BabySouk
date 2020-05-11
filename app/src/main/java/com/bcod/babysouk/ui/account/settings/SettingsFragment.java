@@ -13,20 +13,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bcod.babysouk.R;
-import com.bcod.babysouk.adapter.CountryAdapter;
+import com.bcod.babysouk.adapter.CurrencyAdapter;
 import com.bcod.babysouk.adapter.LanguageAdapter;
 import com.bcod.babysouk.databinding.SettingsFragmentBinding;
-import com.bcod.babysouk.model.CountryItem;
+import com.bcod.babysouk.model.CurrencyItem;
 import com.bcod.babysouk.model.LanguageItem;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class SettingsFragment extends Fragment {
 
     private SettingsFragmentBinding binding;
     private SettingsViewModel mSettingsViewModel;
-    private ArrayList<CountryItem> mCountryArrayList;
+    private ArrayList<CurrencyItem> mCurrencyArrayList;
     private ArrayList<LanguageItem> mLanguageArrayList;
     private Context context;
 
@@ -39,16 +38,18 @@ public class SettingsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = SettingsFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-        assert container != null;
-        context = container.getContext();
-        initCountryList();
+        if (container != null) {
+            context = container.getContext();
+        }
+        initCurrencyList();
         initLanguageList();
-        // TODO Contructor context
-        CountryAdapter mRegionAdapter = new CountryAdapter(context, mCountryArrayList);
-        assert binding.countryDropDownMenu != null;
-        binding.countryDropDownMenu.setAdapter(mRegionAdapter);
-        LanguageAdapter mAdapter = new LanguageAdapter(context, mLanguageArrayList);
-        binding.languageDropDownMenu.setAdapter(mAdapter);
+
+        CurrencyAdapter mRegionAdapter = new CurrencyAdapter(context, mCurrencyArrayList);
+        if (binding.countryDropDownMenu != null) {
+            binding.countryDropDownMenu.setAdapter(mRegionAdapter);
+        }
+        LanguageAdapter mLanguageAdapter = new LanguageAdapter(context, mLanguageArrayList);
+        binding.languageDropDownMenu.setAdapter(mLanguageAdapter);
         binding.languageDropDownMenu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -79,403 +80,406 @@ public class SettingsFragment extends Fragment {
         binding = null;
     }
 
-    private void initCountryList() {
-        mCountryArrayList = new ArrayList<>();
-        mCountryArrayList.add(new CountryItem(R.drawable.united_arab_emirates,
-                R.string.united_arab_emirates, R.string.united_arab_emirates_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.afghanistan,
+    private void initCurrencyList() {
+        mCurrencyArrayList = new ArrayList<>();
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.united_arab_emirates,
+                R.string.united_arab_emirates_short_form, R.string.united_arab_emirates_currency));
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.afghanistan,
                 R.string.afghanistan, R.string.afghanistan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.albania,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.albania,
                 R.string.albania, R.string.albania_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.algeria,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.algeria,
                 R.string.algeria, R.string.algeria_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.andorra,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.andorra,
                 R.string.andorra, R.string.andorra_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.angola,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.angola,
                 R.string.angola, R.string.angola_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.anguilla,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.anguilla,
                 R.string.anguilla, R.string.anguilla_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.argentina,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.argentina,
                 R.string.argentina, R.string.argentina_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.armenia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.armenia,
                 R.string.armenia, R.string.armenia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.aruba,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.aruba,
                 R.string.aruba, R.string.aruba_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.australia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.australia,
                 R.string.australia, R.string.australia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.austria,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.austria,
                 R.string.austria, R.string.austria_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.azerbaijan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.azerbaijan,
                 R.string.azerbaijan, R.string.azerbaijan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bahamas,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bahamas,
                 R.string.bahamas, R.string.bahamas_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bahrain,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bahrain,
                 R.string.bahrain, R.string.bahrain_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bangladesh,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bangladesh,
                 R.string.bangladesh, R.string.bangladesh_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.barbados,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.barbados,
                 R.string.barbados, R.string.barbados_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.belarus,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.belarus,
                 R.string.belarus, R.string.belarus_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.belgium,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.belgium,
                 R.string.belgium, R.string.belarus_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.belize,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.belize,
                 R.string.belize, R.string.belize_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.benin,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.benin,
                 R.string.benin, R.string.benin_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bermuda,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bermuda,
                 R.string.bermuda, R.string.bermuda_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bhutan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bhutan,
                 R.string.bhutan, R.string.bhutan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bolivia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bolivia,
                 R.string.bolivia, R.string.bolivia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bosnia_and_herzegovina,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bosnia_and_herzegovina,
                 R.string.bosnia_and_herzegovina, R.string.bosnia_and_herzegovina_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.botswana,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.botswana,
                 R.string.botswana, R.string.botswana_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.brazil,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.brazil,
                 R.string.brazil, R.string.brazil_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.british_virgin_islands,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.british_virgin_islands,
                 R.string.british_virgin_islands, R.string.british_virgin_islands_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.brunei,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.brunei,
                 R.string.brunei, R.string.brunei_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.bulgaria,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.bulgaria,
                 R.string.bulgaria, R.string.bulgaria_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.burkina_faso,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.burkina_faso,
                 R.string.burkina_faso, R.string.burkina_faso_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.burundi,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.burundi,
                 R.string.burundi, R.string.burundi_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cambodia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cambodia,
                 R.string.cambodia, R.string.cambodia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cameroon,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cameroon,
                 R.string.cameroon, R.string.cameroon_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.canada,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.canada,
                 R.string.canada, R.string.canada_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cape_verde,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cape_verde,
                 R.string.cape_verde, R.string.cape_verde_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cayman_islands,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cayman_islands,
                 R.string.cayman_islands, R.string.cayman_islands_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.central_african_republic,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.central_african_republic,
                 R.string.central_african_republic, R.string.central_african_republic_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.chad,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.chad,
                 R.string.chad, R.string.chad_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.chile,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.chile,
                 R.string.chile, R.string.chile_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.china,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.china,
                 R.string.china, R.string.china_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.colombia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.colombia,
                 R.string.colombia, R.string.colombia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.costa_rica,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.costa_rica,
                 R.string.costa_rica, R.string.costa_rica_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cote_divoire,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cote_divoire,
                 R.string.cote_divoire, R.string.cote_divoire_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.croatia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.croatia,
                 R.string.croatia, R.string.croatia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cuba,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cuba,
                 R.string.cuba, R.string.cuba_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.curacao,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.curacao,
                 R.string.curacao, R.string.curacao_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.cyprus,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.cyprus,
                 R.string.cyprus, R.string.cyprus_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.czech_republic,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.czech_republic,
                 R.string.czech_republic, R.string.czech_republic_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.democratic_republic_of_the_congo,
-                R.string.democratic_republic_of_the_congo, R.string.democratic_republic_of_the_congo_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.denmark,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.democratic_republic_of_the_congo,
+                R.string.democratic_republic_of_the_congo_short_form,
+                R.string.democratic_republic_of_the_congo_currency));
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.denmark,
                 R.string.denmark, R.string.denmark_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.djibouti,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.djibouti,
                 R.string.djibouti, R.string.djibouti_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.dominica,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.dominica,
                 R.string.dominica, R.string.dominica_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.dominican_republic,
-                R.string.dominican_republic, R.string.dominican_republic));
-        mCountryArrayList.add(new CountryItem(R.drawable.east_timor,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.dominican_republic,
+                R.string.dominican_republic, R.string.dominican_republic_currency));
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.east_timor,
                 R.string.east_timor, R.string.east_timor_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.ecuador,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.ecuador,
                 R.string.ecuador, R.string.ecuador_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.egypt,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.egypt,
                 R.string.egypt, R.string.egypt_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.el_salvador,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.el_salvador,
                 R.string.el_salvador, R.string.el_salvador_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.equatorial_guinea,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.equatorial_guinea,
                 R.string.equatorial_guinea, R.string.equatorial_guinea_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.eritrea,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.eritrea,
                 R.string.eritrea, R.string.eritrea_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.estonia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.estonia,
                 R.string.estonia, R.string.estonia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.eswatini,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.eswatini,
                 R.string.eswatini, R.string.eswatini_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.ethiopia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.ethiopia,
                 R.string.ethiopia, R.string.ethiopia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.falkland_islands,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.falkland_islands,
                 R.string.falkland_islands, R.string.falkland_islands_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.faroe_islands,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.faroe_islands,
                 R.string.faroe_islands, R.string.faroe_islands_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.fiji,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.fiji,
                 R.string.fiji, R.string.fiji_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.finland,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.finland,
                 R.string.finland, R.string.finland_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.france,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.france,
                 R.string.france, R.string.france_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.french_guiana,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.french_guiana,
                 R.string.french_guiana, R.string.french_guiana_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.french_polynesia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.french_polynesia,
                 R.string.french_polynesia, R.string.french_polynesia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.gabon,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.gabon,
                 R.string.gabon, R.string.gabon_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.gambia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.gambia,
                 R.string.gambia, R.string.gambia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.georgia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.georgia,
                 R.string.georgia, R.string.georgia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.germany,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.germany,
                 R.string.germany, R.string.germany_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.ghana,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.ghana,
                 R.string.ghana, R.string.ghana_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.gibraltar,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.gibraltar,
                 R.string.gibraltar, R.string.gibraltar_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.greece,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.greece,
                 R.string.greece, R.string.greece_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.greenland,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.greenland,
                 R.string.greenland, R.string.greenland_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.grenada,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.grenada,
                 R.string.grenada, R.string.grenada_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.guatemala,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.guatemala,
                 R.string.guatemala, R.string.guatemala_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.guernsey,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.guernsey,
                 R.string.guernsey, R.string.guernsey_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.guinea,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.guinea,
                 R.string.guinea, R.string.guinea_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.guinea_bissau,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.guinea_bissau,
                 R.string.guinea_bissau, R.string.guinea_bissau_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.guyana,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.guyana,
                 R.string.guyana, R.string.guyana_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.haiti,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.haiti,
                 R.string.haiti, R.string.haiti_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.honduras,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.honduras,
                 R.string.honduras, R.string.honduras_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.hong_kong,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.hong_kong,
                 R.string.hong_kong, R.string.hong_kong_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.hungary,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.hungary,
                 R.string.hungary, R.string.hungary_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.iceland,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.iceland,
                 R.string.iceland, R.string.iceland_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.india,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.india,
                 R.string.india, R.string.india_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.indonesia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.indonesia,
                 R.string.indonesia, R.string.indonesia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.iran,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.iran,
                 R.string.iran, R.string.iran_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.iraq,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.iraq,
                 R.string.iraq, R.string.iraq_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.ireland,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.ireland,
                 R.string.ireland, R.string.ireland_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.isle_of_man,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.isle_of_man,
                 R.string.isle_of_man, R.string.isle_of_man_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.israel,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.israel,
                 R.string.israel, R.string.israel_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.italy,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.italy,
                 R.string.italy, R.string.italy_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.jamaica,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.jamaica,
                 R.string.jamaica, R.string.jamaica_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.japan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.japan,
                 R.string.japan, R.string.japan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.jersey,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.jersey,
                 R.string.jersey, R.string.jersey_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.jordan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.jordan,
                 R.string.jordan, R.string.jordan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.kazakhstan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.kazakhstan,
                 R.string.kazakhstan, R.string.kazakhstan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.kenya,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.kenya,
                 R.string.kenya, R.string.kenya_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.kosovo,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.kosovo,
                 R.string.kosovo, R.string.kosovo_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.kuwait,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.kuwait,
                 R.string.kuwait, R.string.kuwait_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.kyrgyzstan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.kyrgyzstan,
                 R.string.kyrgyzstan, R.string.kyrgyzstan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.laos,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.laos,
                 R.string.laos, R.string.laos_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.latvia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.latvia,
                 R.string.latvia, R.string.latvia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.lebanon,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.lebanon,
                 R.string.lebanon, R.string.lebanon_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.liberia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.liberia,
                 R.string.liberia, R.string.liberia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.libya,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.libya,
                 R.string.libya, R.string.libya_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.liechtenstein,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.liechtenstein,
                 R.string.liechtenstein, R.string.liechtenstein_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.lithuania,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.lithuania,
                 R.string.lithuania, R.string.lithuania_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.luxembourg,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.luxembourg,
                 R.string.luxembourg, R.string.luxembourg_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.macao,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.macao,
                 R.string.macao, R.string.macao_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.madagascar,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.madagascar,
                 R.string.madagascar, R.string.madagascar_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.malawi,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.malawi,
                 R.string.malawi, R.string.malawi_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.malaysia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.malaysia,
                 R.string.malaysia, R.string.malaysia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.maldives,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.maldives,
                 R.string.maldives, R.string.maldives_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.mali,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.mali,
                 R.string.mali, R.string.mali_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.malta,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.malta,
                 R.string.malta, R.string.malta_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.mauritania,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.mauritania,
                 R.string.mauritania, R.string.mauritania_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.mauritius,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.mauritius,
                 R.string.mauritius, R.string.mauritius_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.mexico,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.mexico,
                 R.string.mexico, R.string.mexico_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.moldova,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.moldova,
                 R.string.moldova, R.string.moldova_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.monaco,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.monaco,
                 R.string.monaco, R.string.monaco_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.mongolia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.mongolia,
                 R.string.mongolia, R.string.mongolia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.montenegro,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.montenegro,
                 R.string.montenegro, R.string.montenegro_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.montserrat,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.montserrat,
                 R.string.montserrat, R.string.montserrat_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.morocco,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.morocco,
                 R.string.morocco, R.string.morocco_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.mozambique,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.mozambique,
                 R.string.mozambique, R.string.mozambique_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.myanmar,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.myanmar,
                 R.string.myanmar, R.string.myanmar_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.namibia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.namibia,
                 R.string.namibia, R.string.namibia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.nepal,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.nepal,
                 R.string.nepal, R.string.nepal_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.netherlands,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.netherlands,
                 R.string.netherlands, R.string.netherlands_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.new_caledonia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.new_caledonia,
                 R.string.new_caledonia, R.string.new_caledonia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.new_zealand,
-                R.string.new_zealand, R.string.nicaragua));
-        mCountryArrayList.add(new CountryItem(R.drawable.niger,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.new_zealand,
+                R.string.new_zealand, R.string.new_zealand_currency));
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.nicaragua,
+                R.string.nicaragua, R.string.nicaragua_currency));
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.niger,
                 R.string.niger, R.string.niger_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.nigeria,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.nigeria,
                 R.string.nigeria, R.string.nigeria_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.north_macedonia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.north_macedonia,
                 R.string.north_macedonia, R.string.north_macedonia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.norway,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.norway,
                 R.string.norway, R.string.norway));
-        mCountryArrayList.add(new CountryItem(R.drawable.oman,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.oman,
                 R.string.oman, R.string.oman_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.pakistan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.pakistan,
                 R.string.pakistan, R.string.pakistan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.palestine,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.palestine,
                 R.string.palestine, R.string.palestine_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.panama,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.panama,
                 R.string.panama, R.string.panama_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.papua_new_guinea,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.papua_new_guinea,
                 R.string.papua_new_guinea, R.string.papua_new_guinea_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.paraguay,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.paraguay,
                 R.string.paraguay, R.string.paraguay_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.peru,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.peru,
                 R.string.peru, R.string.peru_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.philippines,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.philippines,
                 R.string.philippines, R.string.philippines_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.poland,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.poland,
                 R.string.poland, R.string.poland_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.portugal,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.portugal,
                 R.string.portugal, R.string.portugal_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.qatar,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.qatar,
                 R.string.qatar, R.string.qatar_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.republic_of_the_congo,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.republic_of_the_congo,
                 R.string.republic_of_the_congo, R.string.republic_of_the_congo_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.romania,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.romania,
                 R.string.romania, R.string.romania_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.russia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.russia,
                 R.string.russia, R.string.russia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.rwanda,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.rwanda,
                 R.string.rwanda, R.string.rwanda_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.saint_lucia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.saint_lucia,
                 R.string.saint_lucia, R.string.saint_lucia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.san_marino,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.san_marino,
                 R.string.san_marino, R.string.san_marino_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.saudi_arabia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.saudi_arabia,
                 R.string.saudi_arabia, R.string.saudi_arabia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.senegal,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.senegal,
                 R.string.senegal, R.string.senegal_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.serbia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.serbia,
                 R.string.serbia, R.string.serbia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.seychelles,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.seychelles,
                 R.string.seychelles, R.string.seychelles_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.sierra_leone,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.sierra_leone,
                 R.string.sierra_leone, R.string.sierra_leone_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.singapore,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.singapore,
                 R.string.singapore, R.string.singapore_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.slovakia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.slovakia,
                 R.string.slovakia, R.string.slovakia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.slovenia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.slovenia,
                 R.string.slovenia, R.string.slovenia));
-        mCountryArrayList.add(new CountryItem(R.drawable.somalia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.somalia,
                 R.string.somalia, R.string.somalia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.south_africa,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.south_africa,
                 R.string.south_africa, R.string.south_africa_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.south_korea,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.south_korea,
                 R.string.south_korea, R.string.south_korea_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.south_sudan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.south_sudan,
                 R.string.south_sudan, R.string.south_sudan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.spain,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.spain,
                 R.string.spain, R.string.spain_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.sri_lanka,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.sri_lanka,
                 R.string.sri_lanka, R.string.sri_lanka_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.sudan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.sudan,
                 R.string.sudan, R.string.sudan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.suriname,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.suriname,
                 R.string.suriname, R.string.suriname_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.sweden,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.sweden,
                 R.string.sweden, R.string.sweden_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.switzerland,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.switzerland,
                 R.string.switzerland, R.string.switzerland_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.syria,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.syria,
                 R.string.syria, R.string.syria_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.taiwan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.taiwan,
                 R.string.taiwan, R.string.taiwan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.tajikistan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.tajikistan,
                 R.string.tajikistan, R.string.tajikistan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.tanzania,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.tanzania,
                 R.string.tanzania, R.string.tanzania_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.thailand,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.thailand,
                 R.string.thailand, R.string.thailand_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.togo,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.togo,
                 R.string.togo, R.string.togo_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.tunisia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.tunisia,
                 R.string.tunisia, R.string.tunisia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.turkey,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.turkey,
                 R.string.turkey, R.string.turkey_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.turkmenistan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.turkmenistan,
                 R.string.turkmenistan, R.string.turkmenistan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.uganda,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.uganda,
                 R.string.uganda, R.string.uganda_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.ukraine,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.ukraine,
                 R.string.ukraine, R.string.ukraine_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.united_arab_emirates,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.united_arab_emirates,
                 R.string.united_arab_emirates, R.string.united_arab_emirates_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.united_kingdom,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.united_kingdom,
                 R.string.united_kingdom, R.string.united_kingdom_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.united_states,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.united_states,
                 R.string.united_states, R.string.united_states_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.uruguay,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.uruguay,
                 R.string.uruguay, R.string.uruguay_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.uzbekistan,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.uzbekistan,
                 R.string.uzbekistan, R.string.uzbekistan_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.vatican,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.vatican,
                 R.string.vatican, R.string.vatican_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.venezuela,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.venezuela,
                 R.string.venezuela, R.string.venezuela_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.vietnam,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.vietnam,
                 R.string.vietnam, R.string.vietnam_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.yemen,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.yemen,
                 R.string.yemen, R.string.yemen_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.zambia,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.zambia,
                 R.string.zambia, R.string.zambia_currency));
-        mCountryArrayList.add(new CountryItem(R.drawable.zimbabwe,
+        mCurrencyArrayList.add(new CurrencyItem(R.drawable.zimbabwe,
                 R.string.zimbabwe, R.string.zimbabwe_currency));
     }
 
