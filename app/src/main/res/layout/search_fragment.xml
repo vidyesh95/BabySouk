@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:id="@+id/search_fragment_container"
     tools:context=".appbar.search.SearchFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/linear_layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorOriginal">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/search_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/search"
+                    android:maxLength="320"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginRight="34dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:drawableStart="@drawable/ic_search_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:background="@drawable/transparent_bg_bordered_button"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="85dp"/>
+
 </FrameLayout>
