@@ -32,6 +32,7 @@ public class CartFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mCartViewModel = new ViewModelProvider(this).get(CartViewModel.class);
         // TODO: Use the ViewModel
+
     }
 
 }

@@ -55,6 +55,7 @@
             android:background="?android:attr/windowBackground"
             android:theme="@style/BottomNavigationTheme"
             app:labelVisibilityMode="labeled"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
