@@ -11,7 +11,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -21,6 +24,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bcod.babysouk.adapter.NavigationAdapter;
 import com.bcod.babysouk.adapter.SubNavigationAdapter;
+import com.bcod.babysouk.appbar.cart.CartFragment;
+import com.bcod.babysouk.appbar.search.SearchFragment;
 import com.bcod.babysouk.databinding.ActivityMainBinding;
 import com.bcod.babysouk.model.NavigationItem;
 import com.bcod.babysouk.model.SubNavigationItem;
@@ -30,7 +35,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
-    private Context context;
     private NavController navController;
 
     @Override
@@ -40,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         View view = activityMainBinding.getRoot();
         setContentView(view);
         setSupportActionBar(activityMainBinding.toolbar);
-        context = this;
 
         initNavigationRecyclerView();
         //initSubNavigationRecyclerView();
@@ -75,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this,
                 R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(activityMainBinding.bottomNavView, navController);
-
     }
 
     private void initNavigationRecyclerView() {
@@ -142,23 +144,23 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.option_menu, menu);
+
+        MenuItem myActionMenuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) myActionMenuItem.getActionView();
+        searchView.setQueryHint("I'm looking for");
+        searchView.setOnSearchClickListener(view -> {
+            loadFragment(new SearchFragment());
+
+        });
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_search:
-                Toast.makeText(this, "search selected", Toast.LENGTH_SHORT).show();
-                navController = Navigation.findNavController(this,
-                        R.id.nav_host_fragment);
-                navController.navigate(R.id.action_navigation_home_to_navigation_search);
-                return true;
             case R.id.action_cart:
                 Toast.makeText(this, "cart selected", Toast.LENGTH_SHORT).show();
-                navController = Navigation.findNavController(this,
-                        R.id.nav_host_fragment);
-                navController.navigate(R.id.action_navigation_home_to_navigation_cart);
+                loadFragment(new CartFragment());
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -171,5 +173,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    public void loadFragment(Fragment fragment){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

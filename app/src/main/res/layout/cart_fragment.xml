@@ -55,14 +55,29 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBaseline_toBaselineOf="@id/cart_personal_items"/>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/my_cart_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cart_delivery_address">
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/my_cart_recyclerview"
                     android:layout_width="0dp"
-                    android:layout_height="400dp"
+                    android:layout_height="300dp"
                     android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cart_delivery_address" />
+                    app:layout_constraintStart_toStartOf="parent"/>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/cart_gift_items"
@@ -74,7 +89,7 @@
                     android:text="@string/gift_items"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    app:layout_constraintTop_toBottomOf="@+id/my_cart_recyclerview"
+                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card"
                     tools:ignore="MissingConstraints" />
 
                 <TextView
@@ -89,7 +104,7 @@
                     android:background="@drawable/round_black_button"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toStartOf="@id/cart_gift_edit_gift"
-                    app:layout_constraintTop_toBottomOf="@+id/my_cart_recyclerview" />
+                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card" />
 
                 <TextView
                     android:id="@+id/cart_gift_edit_gift"
@@ -103,7 +118,23 @@
                     android:background="@drawable/round_black_button"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/my_cart_recyclerview" />
+                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cart_gift_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cart_gift_delivery_address">
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/my_cart_gift_items_recyclerview"
@@ -111,9 +142,8 @@
                     android:layout_height="250dp"
                     android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cart_gift_delivery_address"/>
-
+                    app:layout_constraintStart_toStartOf="parent" />
+                </androidx.cardview.widget.CardView>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/continue_shopping_button"
                     android:layout_width="wrap_content"
@@ -128,7 +158,7 @@
                     android:backgroundTint="@color/transparent"
                     android:background="@drawable/only_border"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/my_cart_gift_items_recyclerview"
+                    app:layout_constraintTop_toBottomOf="@id/cart_gift_card"
                     app:shapeAppearance="@style/CartMaterialButton"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
