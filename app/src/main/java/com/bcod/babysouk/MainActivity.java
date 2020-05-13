@@ -150,14 +150,10 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_search:
                 Toast.makeText(this, "search selected", Toast.LENGTH_SHORT).show();
-                navController = Navigation.findNavController(this,
-                        R.id.nav_host_fragment);
                 navController.navigate(R.id.action_navigation_home_to_navigation_search);
                 return true;
             case R.id.action_cart:
                 Toast.makeText(this, "cart selected", Toast.LENGTH_SHORT).show();
-                navController = Navigation.findNavController(this,
-                        R.id.nav_host_fragment);
                 navController.navigate(R.id.action_navigation_home_to_navigation_cart);
                 return true;
         }
