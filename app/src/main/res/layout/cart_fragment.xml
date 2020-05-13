@@ -12,7 +12,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp">
+        android:layout_marginBottom="54dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,15 +37,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
                     android:text="@string/personal_items"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
                     android:id="@+id/cart_delivery_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingVertical="1dp"
+                    android:paddingHorizontal="8dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginRight="24dp"
                     android:text="@string/delivery_address"
@@ -89,36 +93,38 @@
                     android:text="@string/gift_items"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card" />
 
                 <TextView
                     android:id="@+id/cart_gift_delivery_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="1dp"
                     android:layout_marginEnd="14dp"
                     android:layout_marginRight="14dp"
-                    android:layout_marginTop="30dp"
                     android:text="@string/delivery_address"
                     android:textColor="@color/white"
                     android:background="@drawable/round_black_button"
                     android:textSize="12sp"
-                    app:layout_constraintEnd_toStartOf="@id/cart_gift_edit_gift"
-                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card" />
+                    app:layout_constraintBaseline_toBaselineOf="@+id/cart_gift_items"
+                    app:layout_constraintEnd_toStartOf="@id/cart_gift_edit_gift" />
 
                 <TextView
                     android:id="@+id/cart_gift_edit_gift"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingVertical="1dp"
+                    android:paddingHorizontal="8dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginRight="24dp"
-                    android:layout_marginTop="30dp"
                     android:text="@string/edit_gift"
                     android:textColor="@color/white"
                     android:background="@drawable/round_black_button"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/my_cart_card" />
+                    app:layout_constraintBaseline_toBaselineOf="@+id/cart_gift_items" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cart_gift_card"
@@ -144,6 +150,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
                 </androidx.cardview.widget.CardView>
+
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/continue_shopping_button"
                     android:layout_width="wrap_content"
@@ -159,7 +166,16 @@
                     android:background="@drawable/only_border"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cart_gift_card"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:shapeAppearance="@style/CartMaterialButton"/>
+
+                <Space
+                    android:id="@+id/first_space_cart"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/continue_shopping_button" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -168,8 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/continue_shopping_button"
-                tools:layout_editor_absoluteX="0dp">
+                app:layout_constraintTop_toBottomOf="@id/first_space_cart">
 
 
                 <TextView
@@ -183,7 +198,7 @@
                     android:text="@string/sub_total"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textSize="14sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/sub_total_price_text"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
 
@@ -191,14 +206,14 @@
                     android:id="@+id/sub_total_price_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginEnd="54dp"
+                    android:layout_marginRight="54dp"
                     android:padding="2dp"
-                    android:text="Price"
+                    android:text="AED 237.0"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textSize="14sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/sub_total_text"
-                    app:layout_constraintStart_toEndOf="@id/sub_total_text" />
+                    app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
                     android:id="@+id/gift_packing_text"
@@ -206,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="54dp"
                     android:layout_marginLeft="54dp"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp"
                     android:text="@string/gift_packing"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -218,14 +233,14 @@
                     android:id="@+id/gift_packing_price_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginEnd="54dp"
+                    android:layout_marginRight="54dp"
                     android:padding="2dp"
-                    android:text="Price"
+                    android:text="AED 10.0"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textSize="14sp"
-                    app:layout_constraintStart_toEndOf="@id/sub_total_text"
-                    app:layout_constraintTop_toBottomOf="@id/sub_total_text" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBaseline_toBaselineOf="@id/gift_packing_text" />
 
                 <TextView
                     android:id="@+id/shipping_text"
@@ -233,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="54dp"
                     android:layout_marginLeft="54dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:padding="2dp"
                     android:text="@string/shipping"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -245,14 +260,14 @@
                     android:id="@+id/shipping_price_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginEnd="54dp"
+                    android:layout_marginRight="54dp"
                     android:padding="2dp"
-                    android:text="Price"
+                    android:text="AED 0.0"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textSize="14sp"
-                    app:layout_constraintStart_toEndOf="@id/sub_total_text"
-                    app:layout_constraintTop_toBottomOf="@id/gift_packing_price_text" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/shipping_text" />
 
                 <TextView
                     android:id="@+id/grand_total_text"
@@ -260,29 +275,35 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="54dp"
                     android:layout_marginLeft="54dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:padding="2dp"
                     android:text="@string/grand_total"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/shipping_price_text" />
+                    app:layout_constraintTop_toBottomOf="@id/shipping_text" />
 
                 <TextView
                     android:id="@+id/grand_total_price_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="54dp"
+                    android:layout_marginRight="54dp"
                     android:padding="2dp"
-                    android:text="Price"
+                    android:text="AED 247.0"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/sub_total_text"
-                    app:layout_constraintTop_toBottomOf="@id/shipping_price_text" />
+                    app:layout_constraintBaseline_toBaselineOf="@id/grand_total_text"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/grand_total_text" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
@@ -290,9 +311,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cart_checkout_btn"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="54dp"
         android:text="@string/checkout"
         android:textColor="@color/white"
         android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
         android:layout_gravity="bottom"/>
 </FrameLayout>
