@@ -23,12 +23,6 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_account"
             app:destination="@id/navigation_account" />
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_cart"
-            app:destination="@id/action_cart"/>
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_search"
-            app:destination="@id/action_search"/>
 
     </fragment>
 
@@ -120,19 +114,4 @@
 
     </fragment>
 
-    <fragment
-        android:id="@+id/action_cart"
-        android:name="com.bcod.babysouk.appbar.cart.CartFragment"
-        android:label="@string/title_cart"
-        tools:layout="@layout/cart_fragment">
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/action_search"
-        android:name="com.bcod.babysouk.appbar.search.SearchFragment"
-        android:label="@string/search"
-        tools:layout="@layout/search_fragment">
-
-    </fragment>
 </navigation>

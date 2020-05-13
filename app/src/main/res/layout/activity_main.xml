@@ -38,7 +38,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:src="@drawable/babysouk_title"
                     android:contentDescription="@string/app_name" />
             </androidx.appcompat.widget.Toolbar>
@@ -97,5 +97,7 @@
             android:id="@+id/nav_view_custom"
             layout="@layout/navigation_drawer_custom" />
     </com.google.android.material.navigation.NavigationView>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
