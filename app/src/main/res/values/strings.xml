@@ -947,7 +947,7 @@
     <string name="register">REGISTER</string>
 
     <string name="add_address_for_delivery">Add address for delivery</string>
-    <string name="add_new_address">ADD NEW ADDRESS</string>
+    <string name="add_new_address">Add New Address</string>
 
     <string name="premium_brands">Top premium brands</string>
     <string name="new_arrivals">New Arrivals</string>
@@ -983,7 +983,10 @@
 
     <string name="showing_items">Showing 0 items</string>
     <string name="saved_address">SAVED ADDRESS</string>
-    <string name="delivery_address">DELIVERY ADDRESS</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="delivery_method">Delivery Method</string>
+    <string name="delivery_normal">Normal Delivery</string>
+    <string name="delivery_express">Express Delivery</string>
     <string name="personal_items">PERSONAL ITEMS</string>
     <string name="gift_items">GIFT ITEMS</string>
     <string name="edit_gift">EDIT GIFT</string>
@@ -993,6 +996,32 @@
     <string name="gift_packing">Gift Packing</string>
     <string name="shipping">Shipping Fees</string>
     <string name="checkout">CHECKOUT</string>
+    <string name="title_delivery_address">Your Delivery Address</string>
+    <string name="choose_address_from">Choose Address From</string>
+    <string name="my_shipping_address">My Shipping Address</string>
+    <string name="family_friends">Family and Friends</string>
+    <string name="work">Work</string>
+    <string name="house">House/Building No.</string>
+    <string name="street">Street Name</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="learn_more">(Learn more)</string>
+    <string name="click_for_more_details">(Click here for more details)</string>
+    <string name="deliveries_daily">Deliveries Daily</string>
+    <string name="select_size">Select A Size</string>
+    <string name="quantity">Quantity</string>
+    <string name="overview">Overview</string>
+    <string name="brandStory">Brand Story</string>
+    <string name="delivery_returns"><![CDATA[Delivery & Returns]]></string>
+    <string name="reviews">Reviews</string>
+    <string name="gift_wrap">Gift Wrap</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="other">Other</string>
+    <string name="area">Area</string>
+    <string name="current_location">Use Current Location</string>
+    <string name="save_address">Save Address</string>
+
 
 
 </resources>

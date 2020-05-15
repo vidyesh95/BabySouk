@@ -17,6 +17,7 @@ import com.bcod.babysouk.R;
 import com.bcod.babysouk.adapter.HomeViewPagerAdapter;
 import com.bcod.babysouk.databinding.HomeFragmentBinding;
 import com.bcod.babysouk.model.HomeViewPagerItem;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.youth.banner.Banner;
 import com.youth.banner.indicator.CircleIndicator;
 
@@ -38,6 +39,7 @@ public class HomeFragment extends Fragment {
         binding.homeViewPager.setAdapter(new HomeViewPagerAdapter(HomeViewPagerItem.getTestData()))
                 .setIndicator(new CircleIndicator(container.getContext()))
                 .start();
+
         return view;
     }
 
@@ -46,6 +48,7 @@ public class HomeFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mHomeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         // TODO: Use the ViewModel
+
     }
 
     @Override
