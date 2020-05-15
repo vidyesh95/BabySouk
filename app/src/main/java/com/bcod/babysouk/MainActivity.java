@@ -3,6 +3,7 @@ package com.bcod.babysouk;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.transition.Visibility;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,14 +26,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bcod.babysouk.adapter.NavigationAdapter;
 import com.bcod.babysouk.adapter.SubNavigationAdapter;
 import com.bcod.babysouk.appbar.cart.CartFragment;
+import com.bcod.babysouk.appbar.cart.delivery_address.DeliveryAddressFragment;
 import com.bcod.babysouk.appbar.search.SearchFragment;
 import com.bcod.babysouk.databinding.ActivityMainBinding;
 import com.bcod.babysouk.model.NavigationItem;
 import com.bcod.babysouk.model.SubNavigationItem;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CartFragment.your_Address {
 
     private ActivityMainBinding activityMainBinding;
     private NavController navController;
@@ -44,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
         View view = activityMainBinding.getRoot();
         setContentView(view);
         setSupportActionBar(activityMainBinding.toolbar);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.setVisibility(View.VISIBLE);
+
 
         initNavigationRecyclerView();
         //initSubNavigationRecyclerView();
@@ -168,8 +175,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.setVisibility(View.VISIBLE);
         if (activityMainBinding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             activityMainBinding.drawerLayout.closeDrawer(GravityCompat.START);
+
         } else {
             super.onBackPressed();
         }
@@ -180,5 +190,11 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+
+    @Override
+    public void yourDeliveryAdress() {
+        loadFragment(new DeliveryAddressFragment());
     }
 }
